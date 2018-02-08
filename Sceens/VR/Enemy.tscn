@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Models/Hive Cristalin Ship.dae" type="PackedScene" id=1]
+
+[node name="Spatial" type="Spatial" index="0"]
+
+[node name="Enemyship" parent="." index="0" instance=ExtResource( 1 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6, 0 )
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="Navigation" type="Navigation" parent="Enemyship" index="4"]
+
+up_vector = Vector3( 0, 1, 0 )
+
+
