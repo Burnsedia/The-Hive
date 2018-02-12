@@ -1,0 +1,46 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://The-Hive/Models/Hive Mother Ship.dae" type="PackedScene" id=1]
+
+[sub_resource type="SphereShape" id=1]
+
+radius = 1.0
+
+[node name="Node" type="Node" index="0"]
+
+[node name="Scene Root" type="Spatial" parent="." index="0" instance=ExtResource( 1 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.421834, 3.46094, 3.33436 )
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="Area" type="Area" parent="Scene Root" index="2"]
+
+input_ray_pickable = false
+input_capture_on_drag = false
+space_override = 0
+gravity_point = false
+gravity_distance_scale = 0.0
+gravity_vec = Vector3( 0, -1, 0 )
+gravity = 9.8
+linear_damp = 0.1
+angular_damp = 1.0
+priority = 0.0
+monitoring = true
+monitorable = true
+collision_layer = 1
+collision_mask = 1
+audio_bus_override = false
+audio_bus_name = "Master"
+reverb_bus_enable = false
+reverb_bus_name = "Master"
+reverb_bus_amount = 0.0
+reverb_bus_uniformity = 0.0
+
+[node name="CollisionShape" type="CollisionShape" parent="Scene Root/Area" index="0"]
+
+transform = Transform( 100, 0, 0, 0, 100, 0, 0, 0, 100, -1.76787, 0, 0 )
+shape = SubResource( 1 )
+disabled = true
+_sections_unfolded = [ "Transform" ]
+
+

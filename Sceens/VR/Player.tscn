@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://The-Hive/Models/Hive Cristalin Ship.dae" type="PackedScene" id=1]
+
+[node name="Spatial" type="Spatial" index="0"]
+
+[node name="Scene Root" type="Spatial" parent="." index="0" instance=ExtResource( 1 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.63569, -0.418024, -6.05893 )
+
+
