@@ -14,7 +14,12 @@ func _fixed_process(delta):
 			if thing.is_in_group("player"):
 				if thing.get_position().x < self.global_position.x:
 					Move = Move.normalized()* speed
-				
+				if thing.get_position().y < self.global_position.y:
+					Move = Move.normalized()* speed
+			  if thing.get_position().z < self.global_position.z:
+						Move = Move.normalized()* speed	
+
+				    
 			
     
 
