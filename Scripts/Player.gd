@@ -25,11 +25,11 @@ func _process(delta):
 		get_node("player").translate(Vector3(0,-delta*speed,0))
 	
 	if Input.is_action_pressed("Role_Left"):
-		get_node("player").rotate_object_local(Vector3(0,0,-Yaw))
+		get_node("player").rotate.Vector3(0,0,-Yaw)
 	if Input.is_action_pressed("Role_Right"):
-		get_node("player").rotate_object_local(Vector3(0,0,Yaw))  
+		get_node("player").rotate.Vector3(0,0,Yaw)  
 		
 	if Input.is_action_pressed("Pich_Up"):
-	    get_node("player").rotate_object_local(Vector3(Pich,0,0))
+	    get_node("player").rotate.Vector3(Pich,0,0)
 	if Input.is_action_pressed("Pich_Down"):
-		get_node("player").rotate_object_local(Vector3(-Pich,0,0))
+		get_node("player").rotate(Vector3(-Pich,0,0))
