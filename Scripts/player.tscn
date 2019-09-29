@@ -1,0 +1,63 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://sclripts/Player.gd" type="Script" id=1]
+[ext_resource path="res://sclripts/Follow_Camera.gd" type="Script" id=2]
+[ext_resource path="res://assets/TEST2.glb" type="PackedScene" id=3]
+
+[sub_resource type="CapsuleShape" id=1]
+
+[node name="player" type="KinematicBody"]
+script = ExtResource( 1 )
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+shape = SubResource( 1 )
+
+[node name="RayCast" type="RayCast" parent="."]
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0249572, 5.01608, 10.355 )
+current = true
+script = ExtResource( 2 )
+
+[node name="shoot" type="Button" parent="."]
+margin_left = 69.0
+margin_top = 461.0
+margin_right = 164.0
+margin_bottom = 531.0
+text = "Shoot"
+
+[node name="up" type="Button" parent="."]
+margin_left = 905.0
+margin_top = 427.0
+margin_right = 945.0
+margin_bottom = 467.0
+text = "up"
+
+[node name="down" type="Button" parent="."]
+margin_left = 907.0
+margin_top = 528.0
+margin_right = 947.0
+margin_bottom = 568.0
+text = "down"
+
+[node name="left" type="Button" parent="."]
+margin_left = 833.0
+margin_top = 480.0
+margin_right = 873.0
+margin_bottom = 520.0
+text = "left"
+
+[node name="right" type="Button" parent="."]
+margin_left = 983.0
+margin_top = 479.0
+margin_right = 1023.0
+margin_bottom = 519.0
+text = "right"
+
+[node name="Scene Root" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 100 )
+
+[connection signal="pressed" from="up" to="." method="_on_up_pressed"]
+[connection signal="pressed" from="down" to="." method="_on_down_pressed"]
+[connection signal="pressed" from="left" to="." method="_on_left_pressed"]
+[connection signal="pressed" from="right" to="." method="_on_right_pressed"]

@@ -2,15 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/Hive Mother Ship.dae-4c1ba72f6aaeefcf433c13aed33e8119.scn"
+path="res://.import/Hive Cristalin Ship.dae-cbf56ec06070b40363f8a476762e2f43.scn"
 
 [deps]
 
-source_file="res://The-Hive/Models/Hive Mother Ship.dae"
-source_md5="d3d1c093dec9563ae1d2e6ca673bcffc"
-
-dest_files=[ "res://.import/Hive Mother Ship.dae-4c1ba72f6aaeefcf433c13aed33e8119.scn" ]
-dest_md5="628c9336ce9de02e16462557d49e569a"
+source_file="res://Models/Hive Cristalin Ship.dae"
+dest_files=[ "res://.import/Hive Cristalin Ship.dae-cbf56ec06070b40363f8a476762e2f43.scn" ]
 
 [params]
 
