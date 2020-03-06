@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/Hive Cristalin Ship.dae-cbf56ec06070b40363f8a476762e2f43.scn"
+path="res://.import/Hive Cristalin Ship.dae-e12778dac2ff33f2a1379c982eef2c73.scn"
 
 [deps]
 
-source_file="res://Models/Hive Cristalin Ship.dae"
-dest_files=[ "res://.import/Hive Cristalin Ship.dae-cbf56ec06070b40363f8a476762e2f43.scn" ]
+source_file="res://assets/Models/Hive Cristalin Ship.dae"
+dest_files=[ "res://.import/Hive Cristalin Ship.dae-e12778dac2ff33f2a1379c982eef2c73.scn" ]
 
 [params]
 

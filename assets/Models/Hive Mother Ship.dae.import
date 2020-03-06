@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/Hive Mother Ship.dae-9c849bc4f57d3a1cfca53f9e63f832d7.scn"
+path="res://.import/Hive Mother Ship.dae-f2e441b7920cbd51cdd466c2a7a52739.scn"
 
 [deps]
 
-source_file="res://Models/Hive Mother Ship.dae"
-dest_files=[ "res://.import/Hive Mother Ship.dae-9c849bc4f57d3a1cfca53f9e63f832d7.scn" ]
+source_file="res://assets/Models/Hive Mother Ship.dae"
+dest_files=[ "res://.import/Hive Mother Ship.dae-f2e441b7920cbd51cdd466c2a7a52739.scn" ]
 
 [params]
 
