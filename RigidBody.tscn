@@ -1,0 +1,4 @@
+[gd_scene format=2]
+
+[node name="RigidBody" type="RigidBody"]
+mode = 3

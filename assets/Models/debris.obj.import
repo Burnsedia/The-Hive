@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/debris.obj-d87bf9cdbeb4803d0c7e205fa4cfd77e.mesh"
+
+[deps]
+
+files=[ "res://.import/debris.obj-d87bf9cdbeb4803d0c7e205fa4cfd77e.mesh" ]
+
+source_file="res://assets/Models/debris.obj"
+dest_files=[ "res://.import/debris.obj-d87bf9cdbeb4803d0c7e205fa4cfd77e.mesh", "res://.import/debris.obj-d87bf9cdbeb4803d0c7e205fa4cfd77e.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

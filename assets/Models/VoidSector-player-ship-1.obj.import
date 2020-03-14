@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/VoidSector-player-ship-1.obj-3493b962e4be421ff34b23e3f96ca2de.mesh"
+
+[deps]
+
+files=[ "res://.import/VoidSector-player-ship-1.obj-3493b962e4be421ff34b23e3f96ca2de.mesh" ]
+
+source_file="res://assets/Models/VoidSector-player-ship-1.obj"
+dest_files=[ "res://.import/VoidSector-player-ship-1.obj-3493b962e4be421ff34b23e3f96ca2de.mesh", "res://.import/VoidSector-player-ship-1.obj-3493b962e4be421ff34b23e3f96ca2de.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=2]
+
+[sub_resource type="ProceduralSky" id=1]
+sky_top_color = Color( 0, 0, 0, 1 )
+sky_horizon_color = Color( 0.12549, 1, 1, 1 )
+sky_curve = 0.02
+sky_energy = 2.0
+ground_bottom_color = Color( 0, 0, 0, 1 )
+ground_horizon_color = Color( 0.12549, 1, 1, 1 )
+
+[sub_resource type="Environment" id=2]
+background_mode = 2
+background_sky = SubResource( 1 )
+background_energy = 1.55
+
+[node name="WorldEnvironment" type="WorldEnvironment"]
+environment = SubResource( 2 )
