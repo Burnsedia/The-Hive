@@ -15,5 +15,16 @@ _global_script_class_icons={
 
 [application]
 
-config/name="The-Hive"
-run/main_scene="res://Sceens/root.tscn"
+config/name="Virtual Analog"
+run/main_scene="res://UI/UI.tscn"
+config/icon="res://vanalog_icon.PNG"
+
+[display]
+
+window/size/width=740
+window/size/height=360
+window/size/resizable=false
+
+[rendering]
+
+environment/default_environment="res://default_env.tres"

@@ -2,21 +2,35 @@
 
 [ext_resource path="res://Sceens/map.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Sceens/WorldEnvironment.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Mother-ship.tscn" type="PackedScene" id=3]
 [ext_resource path="res://player.tscn" type="PackedScene" id=4]
-[ext_resource path="res://assets/Models/Hive Mother Ship.dae" type="PackedScene" id=5]
 
 [node name="game-root" type="Node"]
 
 [node name="map" parent="." instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9227, 0, 0 )
 
-[node name="WorldEnvironment" parent="map" instance=ExtResource( 2 )]
-
-[node name="Hive Mother Ship" parent="map" instance=ExtResource( 5 )]
-transform = Transform( -8.14603e-07, 0, -5, 0, 5, 0, 5, 0, -8.14603e-07, 0, 0, -100 )
-
-[node name="SpotLight" type="SpotLight" parent="map/Hive Mother Ship"]
-transform = Transform( 0.277946, -0.95152, 0.13174, 0.95152, 0.25391, -0.173607, 0.13174, 0.173607, 0.975964, 0, 10.419, 0 )
-light_color = Color( 0.0352941, 0.952941, 0.823529, 1 )
-
 [node name="player" parent="map" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+speed = 16
+
+[node name="cruser" parent="map" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -50 )
+
+[node name="cruser2" parent="map" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -56.5201, 20.2481, -84.5719 )
+
+[node name="cruser4" parent="map" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 42.8536, 22.5138, -86.0463 )
+
+[node name="cruser3" parent="map" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 72.1444, 6.78155, -56.1575 )
+collision/safe_margin = 0.072
+
+[node name="cruser5" parent="map" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.24102, 20.9199, -84.9118 )
+
+[node name="cruser6" parent="map" instance=ExtResource( 3 )]
+transform = Transform( 0.999304, 0, 0.0373065, 0, 1, 0, -0.0373065, 0, 0.999304, -29.0025, 11.1686, -54.2296 )
+
+[node name="WorldEnvironment" parent="." instance=ExtResource( 2 )]

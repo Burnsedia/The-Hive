@@ -4,9 +4,22 @@ extends KinematicBody
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
-export var speed = 16
-var ftl = false
-var sub_light =  true
+export var speed = 64
+export var turn_speed = 8
+export var boot_speed = 2
+onready var guid = $mov_guid
+
+var turn_left = false
+var trun_right = false
+
+var rot_x = 0.0
+var rot_y = 0.0
+var rot_z = 0.0
+
+var mov_x = 0.0
+var mov_y = 0.0
+var mov_z = 0.0
+var mov_vec = Vector3()
 
 
 
@@ -15,60 +28,36 @@ func _ready():
 	pass
 
 
-func _process(delta):
-	flight_controle()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
-#	flight_controle()
-	move(delta)
+	move_input(delta)
+	move_and_slide(mov_vec, Vector3.UP)
+	
+		
 	
 	
+func move_input(delta):
+	#start moving player.
+	if Input.is_action_pressed("ui_left"):
+		mov_vec -= transform.basis.x * speed * delta
+	if Input.is_action_pressed("ui_right"):
+		mov_vec += transform.basis.x * speed * delta
+	if Input.is_action_pressed("ui_down"):
+		mov_vec -= transform.basis.y*speed * delta
+	if Input.is_action_pressed("ui_up"):
+		mov_vec += transform.basis.y* speed * delta
+	#stop moving player
+	if Input.is_action_just_released("ui_left"):
+		mov_vec = Vector3(0,0,mov_vec.z)
+	if Input.is_action_just_released("ui_right"):
+		mov_vec = Vector3(0,0,mov_vec.z)
+	if Input.is_action_just_released("ui_up"):
+		mov_vec = Vector3(0,0,mov_vec.z)
+	if Input.is_action_just_released("ui_down"):
+		mov_vec = Vector3(0,0,mov_vec.z)
+	mov_vec += -transform.basis.z * speed * delta
+
+		
 	
-func move(delta):
-	if not sub_light:
-		ftl_mode(delta)
-	else:
-		nowtowenin_flight_mode(delta)
-
-func nowtowenin_flight_mode(delta):
-	if sub_light == true:
-		ftl = false
-	var vec = transform
-	if Input.is_action_pressed("move_forward"):
-		move_and_collide(-vec.basis.z * speed * delta)	
-	if Input.is_action_pressed("move_backward"):
-		move_and_collide(vec.basis.z * speed * delta)
-	if Input.is_action_pressed("move_left"):
-		move_and_collide(-vec.basis.x * speed * delta)
-	if Input.is_action_pressed("move_right"):
-		move_and_collide(vec.basis.x * speed * delta)
-	if Input.is_action_pressed("move_up"):
-		move_and_collide(vec.basis.y * speed * delta)
-	if Input.is_action_pressed("move_down"):
-		move_and_collide(-vec.basis.y * speed * delta)
-
-func ftl_mode(delta):
-	if ftl == true:
-		sub_light = false
-	var vec = transform
-	translate(-vec.basis.z * speed * delta)
-	if Input.is_action_pressed("move_left"):
-		move_and_collide(-vec.basis.x * speed * delta)
-	if Input.is_action_pressed("move_right"):
-		move_and_collide(vec.basis.x * speed * delta)
-	if Input.is_action_pressed("move_forward"):
-		move_and_collide(vec.basis.y * speed * delta)
-	if Input.is_action_pressed("move_backward"):
-		move_and_collide(-vec.basis.y * speed * delta)
-
-func flight_controle():
-	if Input.is_action_pressed("flight_mode_controle"):
-		print_debug("I preses the swich flight mode botton")
-		if ftl == false:
-			ftl = true
-			sub_light = false
-		if sub_light == false:
-			sub_light = true
-			ftl = false
 	

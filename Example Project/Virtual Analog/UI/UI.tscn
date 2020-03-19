@@ -1,0 +1,30 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://UI/UI.gd" type="Script" id=1]
+[ext_resource path="res://VirtualAnalog/Analog.tscn" type="PackedScene" id=2]
+
+[node name="UI" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+
+[node name="AreaAnalogLeft" type="Control" parent="."]
+margin_right = 370.0
+margin_bottom = 360.0
+
+[node name="AnalogLeft" parent="AreaAnalogLeft" instance=ExtResource( 2 )]
+position = Vector2( 90, 272 )
+isDynamicallyShowing = true
+analogName = "Analog Left"
+
+[node name="AreaAnalogRight" type="Control" parent="."]
+anchor_right = 1.0
+margin_left = 370.0
+margin_bottom = 360.0
+
+[node name="AnalogRight" parent="AreaAnalogRight" instance=ExtResource( 2 )]
+position = Vector2( 291, 272 )
+analogName = "Analog Right"
+
+[connection signal="analog_force_change" from="AreaAnalogLeft/AnalogLeft" to="." method="analog_force_change"]
+[connection signal="analog_force_change" from="AreaAnalogRight/AnalogRight" to="." method="analog_force_change"]

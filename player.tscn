@@ -4,15 +4,16 @@
 [ext_resource path="res://Sceens/KinematicBody.tscn" type="PackedScene" id=2]
 
 [node name="player" instance=ExtResource( 2 )]
-speed = 64
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.07345, 0, 0 )
 
 [node name="TEST2" parent="." index="0" instance=ExtResource( 1 )]
-transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0 )
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.33907, -0.312095 )
 
-[node name="MeshInstance" parent="." index="2"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.91342, 2.35932, 0.0296414 )
-mesh = null
+[node name="CollisionShape" parent="." index="1"]
+transform = Transform( 5, 0, 0, 0, 2, 0, 0, 0, 5, 0, 0, -1.14798 )
 
-[node name="Camera" type="Camera" parent="." index="3"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 5 )
+[node name="Camera" type="Camera" parent="." index="2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 8 )
 far = 250.0
+
+[node name="mov_guid" type="Spatial" parent="." index="3"]
