@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Sceens/Base_sector.tscn" type="PackedScene" id=1]
+[ext_resource path="res://player_ship.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Sceens/Hive Mother Ship.tscn" type="PackedScene" id=4]
+
+[node name="Game_Root" type="Node"]
+
+[node name="Base_sector" parent="." instance=ExtResource( 1 )]
+
+[node name="Hive Mother Ship" parent="Base_sector" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.11937, -32.998 )
+
+[node name="Hive Mother Ship2" parent="Base_sector" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -9.44153, -32.998 )
+
+[node name="Hive Mother Ship3" parent="Base_sector" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 24.9582, 0, -32.998 )
+
+[node name="Hive Mother Ship4" parent="Base_sector" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -23.239, 0.129568, -33.0883 )
+
+[node name="player_ship" parent="Base_sector" instance=ExtResource( 2 )]
+transform = Transform( -0.999988, 0, -0.00497422, 0, 1, 0, 0.00497422, 0, -0.999988, 0, 0, 3.97553 )

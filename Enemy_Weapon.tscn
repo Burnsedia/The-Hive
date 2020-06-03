@@ -1,0 +1,40 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Enemy_Weapon.gd" type="Script" id=1]
+[ext_resource path="res://Area.tscn" type="PackedScene" id=2]
+
+[sub_resource type="CapsuleShape" id=1]
+radius = 0.816519
+height = 2.46431
+
+[sub_resource type="SpatialMaterial" id=2]
+albedo_color = Color( 0.972549, 0.6, 0.454902, 1 )
+
+[sub_resource type="CapsuleMesh" id=3]
+material = SubResource( 2 )
+radius = 0.5
+
+[sub_resource type="SpatialMaterial" id=4]
+albedo_color = Color( 0.184314, 0.517647, 0.321569, 1 )
+
+[sub_resource type="CylinderMesh" id=5]
+material = SubResource( 4 )
+
+[node name="Weapon" type="Area"]
+script = ExtResource( 1 )
+bulit = ExtResource( 2 )
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.02269 )
+shape = SubResource( 1 )
+
+[node name="MeshInstance" type="MeshInstance" parent="."]
+mesh = SubResource( 3 )
+material/0 = null
+
+[node name="MeshInstance2" type="MeshInstance" parent="."]
+transform = Transform( 0.25, 0, 0, 0, -4.37114e-08, -0.25, 0, 1, -1.09278e-08, 0, 0, 1.93444 )
+mesh = SubResource( 5 )
+material/0 = null
+
+[node name="Timer" type="Timer" parent="."]

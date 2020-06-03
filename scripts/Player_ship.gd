@@ -1,40 +1,13 @@
-extends KinematicBody
-class_name Player
+extends ship
 
-
-var position = self.translation
-
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-export var hp = 100
-export var speed = 16
-
-export var turn_speed = 8
-export var boot_speed = 2
 
 onready var weapon = $Weapon
-
-signal shoot
-
-
-enum{flt,combat}
-
-
-var turn_left = false
-var trun_right = false
-
-var ship_state = combat
-#var rot_x = 0.0
-#var rot_y = 0.0
-#var rot_z = 0.0
-var mov_vec = Vector3()
 
 # Called when the node enters the scene tree for the first time.
 func _ready():	
  get_tree().call_group("zombies", "set_player", self)
  get_tree().call_group("sectors", "set_player", self)
- connect("shoot", weapon, "Shoot")
+ connect("shoot", weapon, "use")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -84,10 +57,3 @@ func combat_mode(delta):
 	if Input.is_action_just_pressed("ui_accept"):
 		emit_signal("shoot")
 	mov_vec += transform.basis.z * speed * delta
-	
-
-		
-	
-		
-	
-	

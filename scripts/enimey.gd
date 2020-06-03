@@ -4,9 +4,7 @@ const MOVE_SPEED = 32
 onready var raycast = $RayCast
 var can_shoot = false
 onready var timer = $ShootTimer
-onready var weapon = $Enemy_Weapon
-
-signal shoot
+onready var bullit = preload("res://scripts/projectile.tscn")
 
  
 var player = null
@@ -14,20 +12,25 @@ var dead = false
  
 func _ready():
 	add_to_group("zombies")
-	
-	connect("shoot",self, "shoot")
-
  
 func _physics_process(delta):
 	if dead:
 		return
 	if player == null:
 		return
+	if raycast.is_colliding():
+		var coll = raycast.get_collider()
+		if coll != null and coll.name == "Player":
+			coll.kill()
 	attack()
 	move(delta)
 	
 func attack():
-	emit_signal("shoot")
+	var s = bullit.instance()
+	var player_distance = sqrt(player.tranlation - translation)
+	var attack_range = 25
+	if can_shoot and player_distance < attack_range:
+		add_child(s)
 		
 func kill():
 	dead = true

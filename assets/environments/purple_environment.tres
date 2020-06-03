@@ -2,19 +2,19 @@
 
 [sub_resource type="ProceduralSky" id=1]
 radiance_size = 4
-sky_top_color = Color( 0.129412, 0.184314, 0.329412, 1 )
-sky_horizon_color = Color( 0.333333, 0.196078, 0.462745, 1 )
-sky_curve = 0.420448
-ground_bottom_color = Color( 0.129412, 0.184314, 0.329412, 1 )
-ground_horizon_color = Color( 0.333333, 0.196078, 0.462745, 1 )
-ground_curve = 0.367583
-sun_color = Color( 1, 1, 1, 0 )
+sky_top_color = Color( 0, 0, 0, 1 )
+sky_horizon_color = Color( 0, 1, 1, 1 )
+sky_curve = 0.03
+ground_bottom_color = Color( 0, 0, 0, 1 )
+ground_horizon_color = Color( 0, 1, 1, 1 )
+ground_curve = 0.025
+sun_color = Color( 1, 0.835294, 0.639216, 1 )
 sun_energy = 16.0
 
 [resource]
 background_mode = 2
 background_sky = SubResource( 1 )
-ambient_light_color = Color( 1, 1, 1, 1 )
+ambient_light_color = Color( 0.780392, 0.137255, 0.137255, 1 )
 fog_height_min = 0.0
 fog_height_max = 100.0
 glow_enabled = true

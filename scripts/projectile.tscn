@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=2]
+
+[sub_resource type="CapsuleShape" id=1]
+
+[sub_resource type="SpatialMaterial" id=2]
+albedo_color = Color( 0.976471, 0.054902, 0.0352941, 1 )
+
+[sub_resource type="CapsuleMesh" id=3]
+material = SubResource( 2 )
+
+[sub_resource type="Skin" id=4]
+
+[node name="base_unit" type="KinematicBody"]
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+shape = SubResource( 1 )
+
+[node name="MeshInstance" type="MeshInstance" parent="."]
+mesh = SubResource( 3 )
+skin = SubResource( 4 )
+material/0 = null

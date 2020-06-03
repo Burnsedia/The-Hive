@@ -1,21 +1,23 @@
-extends KinematicBody
- 
-const MOVE_SPEED = 32
-onready var raycast = $RayCast
-var can_shoot = false
-onready var timer = $ShootTimer
-onready var weapon = $Enemy_Weapon
+extends ship
+class_name swam_enemy
 
-signal shoot
+
+onready var raycast = $RayCast
+var can_shoot = true
+
+onready var timer = $ShootTimer
+
+
+
 
  
 var player = null
 var dead = false
  
 func _ready():
+	timer.start()
 	add_to_group("zombies")
 	
-	connect("shoot",self, "shoot")
 
  
 func _physics_process(delta):
@@ -23,11 +25,12 @@ func _physics_process(delta):
 		return
 	if player == null:
 		return
-	attack()
 	move(delta)
+	attack()
 	
 func attack():
-	emit_signal("shoot")
+	if can_shoot:
+		emit_signal("shoot")
 		
 func kill():
 	dead = true
@@ -38,14 +41,14 @@ func set_player(p):
 	player = p
 
 func move(delta):
-	var vec_to_player = player.translation - translation
+	var vec_to_player = player.position - self.position
 	vec_to_player = vec_to_player.normalized()
 	raycast.cast_to = vec_to_player * 1.5
 	self.look_at(vec_to_player,Vector3.UP)
-	move_and_collide(vec_to_player * MOVE_SPEED * delta)
+	move_and_collide(vec_to_player * speed * delta)
 	
 	
 
 func _on_ShootTimer_timeout():
-	can_shoot = true
+	can_shoot = false
 	timer.start()
