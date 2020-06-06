@@ -1,0 +1,61 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Sceens/Base_sector.tscn" type="PackedScene" id=1]
+[ext_resource path="res://player_ship.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Sceens/enemy.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Sceens/Hive Mother Ship.tscn" type="PackedScene" id=4]
+
+[node name="Game_Root" type="Node"]
+
+[node name="Base_sector" parent="." instance=ExtResource( 1 )]
+
+[node name="Hive Mother Ship" parent="Base_sector" instance=ExtResource( 4 )]
+transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 10, -427.219, 36.8736, -33.3451 )
+
+[node name="Hive Mother Ship2" parent="Base_sector" instance=ExtResource( 4 )]
+transform = Transform( 9.97882, 0.650548, 0, -0.650548, 9.97882, 0, 0, 0, 10, 173.721, 24.0074, -42.2573 )
+
+[node name="Hive Mother Ship3" parent="Base_sector" instance=ExtResource( 4 )]
+transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 10, 24.9582, 350.846, -74.8433 )
+
+[node name="Hive Mother Ship4" parent="Base_sector" instance=ExtResource( 4 )]
+transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 10, -40.6721, 37.5047, 834.434 )
+
+[node name="player_ship" parent="Base_sector" instance=ExtResource( 2 )]
+transform = Transform( -0.999988, 0, -0.00497422, 0, 1, 0, 0.00497422, 0, -0.999988, 0, 0, 456.882 )
+
+[node name="enemy" parent="Base_sector" instance=ExtResource( 3 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, -122.789, 0, 0 )
+
+[node name="enemy2" parent="Base_sector" instance=ExtResource( 3 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, -58.6939, 28.9401, 22.7474 )
+
+[node name="enemy3" parent="Base_sector" instance=ExtResource( 3 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, -19.5032, 21.8186, 0 )
+
+[node name="enemy4" parent="Base_sector" instance=ExtResource( 3 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, -29.8229, -14.9782, 0 )
+
+[node name="enemy5" parent="Base_sector" instance=ExtResource( 3 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 3.95634, 43.7631, 0 )
+
+[node name="enemy6" parent="Base_sector" instance=ExtResource( 3 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, -28.7709, 46.9325, 0 )
+
+[node name="enemy7" parent="Base_sector" instance=ExtResource( 3 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, -19.697, -32.0006, 0 )
+
+[node name="enemy8" parent="Base_sector" instance=ExtResource( 3 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, -86.3358, 0, 0 )
+
+[node name="enemy9" parent="Base_sector" instance=ExtResource( 3 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, -23.7014, 37.7763, 0 )
+
+[node name="enemy10" parent="Base_sector" instance=ExtResource( 3 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, -76.5765, 37.4426, 0 )
+
+[node name="enemy11" parent="Base_sector" instance=ExtResource( 3 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, -1.31288, 0, 0 )
+
+[node name="enemy12" parent="Base_sector" instance=ExtResource( 3 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, -42.8069, 0, 0 )

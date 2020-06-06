@@ -1,0 +1,11 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://assets/Models/read hull.material" type="Material" id=1]
+[ext_resource path="res://assets/Models/Material_002.material" type="Material" id=2]
+[ext_resource path="res://assets/Models/drone_mk1.glb" type="PackedScene" id=3]
+
+[node name="drone_mk1" instance=ExtResource( 3 )]
+
+[node name="Cube001" parent="." index="2"]
+material/0 = ExtResource( 2 )
+material/1 = ExtResource( 1 )
