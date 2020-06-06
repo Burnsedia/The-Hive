@@ -49,7 +49,7 @@ func move(delta):
 	vec_to_player = vec_to_player.normalized()
 	raycast.cast_to = vec_to_player * 1.5
 	look_at(vec_to_player,Vector3.UP)
-	move_and_collide(vec_to_player * speed * delta)
+	move_and_collide(vec_to_player * speed/10 * delta)
 	
 
 func _on_ShootTimer_timeout():

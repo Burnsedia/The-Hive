@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://assets/Models/read hull.material" type="Material" id=1]
 [ext_resource path="res://assets/Models/Material_002.material" type="Material" id=2]
@@ -7,9 +7,16 @@
 [sub_resource type="SpatialMaterial" id=1]
 albedo_color = Color( 0.0588235, 0.172549, 0.517647, 1 )
 
+[sub_resource type="CapsuleShape" id=2]
+radius = 12.2797
+height = 32.6077
+
 [node name="Hive Mother Ship" instance=ExtResource( 3 )]
 
 [node name="Cube" parent="." index="0"]
 material/0 = ExtResource( 1 )
 material/1 = ExtResource( 2 )
 material/2 = SubResource( 1 )
+
+[node name="CollisionShape" type="CollisionShape" parent="." index="2"]
+shape = SubResource( 2 )

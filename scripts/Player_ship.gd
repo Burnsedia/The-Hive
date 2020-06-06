@@ -55,8 +55,8 @@ func combat_mode(delta):
 		weapon.use()
 		weapon2.use()
 		weapon3.use()
-	mov_dir = transform.basis.z * speed * delta
-	mov_vec = mov_vec.linear_interpolate(mov_dir,64 * delta)
+	mov_dir = transform.basis.z * speed * 5  * delta
+	mov_vec = mov_vec.linear_interpolate(mov_dir,72 * delta)
 	move_and_slide(mov_vec)
 	
 
