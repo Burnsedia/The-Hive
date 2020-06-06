@@ -11,7 +11,7 @@ const KILL_TIMER = 4
 var timer = 0 
 var b = "text"
 
-export var speed = 100
+export var speed = 1000
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -26,9 +26,9 @@ func _ready():
 
 
 
-func _physics_process(delta):
-	var forward_dir = global_transform.basis.z.normalized()
-	global_translate(forward_dir * speed * delta)
+func _process(delta):
+	var forward_dir = transform.basis.z.normalized() * speed * delta
+	global_translate(forward_dir)
 
 	timer += delta
 	if timer >= KILL_TIMER:

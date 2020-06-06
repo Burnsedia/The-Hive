@@ -221,6 +221,10 @@ _global_script_class_icons={
 config/name="The-Hive"
 run/main_scene="res://Sceens/Game_Root.tscn"
 
+[autoload]
+
+GlobalWeaponEvents="*res://scripts/Globals/Global_weapon_events.gd"
+
 [input]
 
 ui_left={
@@ -261,4 +265,22 @@ roll_right={
 "deadzone": 0.5,
 "events": [ Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":5,"pressure":0.0,"pressed":false,"script":null)
  ]
+}
+rotate_left={
+"deadzone": 0.5,
+"events": [ Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":0,"axis":0,"axis_value":1.0,"script":null)
+ ]
+}
+rotate_right={
+"deadzone": 0.5,
+"events": [ Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":0,"axis":0,"axis_value":1.0,"script":null)
+ ]
+}
+rotate_down={
+"deadzone": 0.5,
+"events": [  ]
+}
+rotate_up={
+"deadzone": 0.5,
+"events": [  ]
 }

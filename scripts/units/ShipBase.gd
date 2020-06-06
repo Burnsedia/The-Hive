@@ -6,7 +6,8 @@ class_name ship
 var position = self.translation
 
 export var hp = 100
-export var speed = 16
+export var speed = 1000
+export var max_speed = 512
 
 export var turn_speed = 8
 export var boot_speed = 2

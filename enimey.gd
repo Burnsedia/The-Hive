@@ -15,7 +15,7 @@ var dead = false
 func _ready():
 	add_to_group("zombies")
 	
-	connect("shoot",self, "shoot")
+	connect("shoot",weapon, "_on_owner_ship_shoot")
 
  
 func _physics_process(delta):
