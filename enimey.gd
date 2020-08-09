@@ -6,7 +6,7 @@ var can_shoot = false
 onready var timer = $ShootTimer
 onready var weapon = $Enemy_Weapon
 
-signal shoot
+
 
  
 var player = null
@@ -15,7 +15,7 @@ var dead = false
 func _ready():
 	add_to_group("zombies")
 	
-	connect("shoot",weapon, "_on_owner_ship_shoot")
+	Events.connect("shoot",weapon, "_on_owner_ship_shoot")
 
  
 func _physics_process(delta):

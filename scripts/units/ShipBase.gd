@@ -12,14 +12,11 @@ export var max_speed = 512
 export var turn_speed = 8
 export var boot_speed = 2
 
-
-
-#
-signal shoot
-signal call_for_help
+#onready var StateMachine = $StateMachine
+#onready var Subsystems = $SubSystemStateMatchine
 
 #behavers
-enum{flt,combat,evade,seek }
+enum{hover,combat,evade,seek, ftl }
 
 
 var turn_left = false
@@ -36,19 +33,4 @@ func _ready():
 #func _process(delta):
 #	pass
 
-func combat_mode(delta):
-	pass
-	
-	
-func flt_mode(delta):
-	pass
-	
-func evade_mode(delta):
-	pass
-
-func seek(delta):
-	pass
-	
-func move(delta):
-	pass
 	

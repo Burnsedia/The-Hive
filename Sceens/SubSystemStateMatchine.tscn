@@ -1,0 +1,19 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://MovementState.gd" type="Script" id=1]
+[ext_resource path="res://SubSystemStateMatchine.gd" type="Script" id=2]
+[ext_resource path="res://WeaponState.gd" type="Script" id=3]
+[ext_resource path="res://SencorState.gd" type="Script" id=4]
+[ext_resource path="res://StateMachine.tscn" type="PackedScene" id=5]
+
+[node name="SubSystemStateMatchine" instance=ExtResource( 5 )]
+script = ExtResource( 2 )
+
+[node name="Movement" parent="." index="0"]
+script = ExtResource( 1 )
+
+[node name="attack" parent="." index="1"]
+script = ExtResource( 3 )
+
+[node name="flee" parent="." index="2"]
+script = ExtResource( 4 )

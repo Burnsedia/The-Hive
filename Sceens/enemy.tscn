@@ -16,11 +16,13 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.94449 )
 
 [node name="RayCast" type="RayCast" parent="." index="1"]
 
-[node name="ShootTimer" type="Timer" parent="." index="2"]
+[node name="targeting" type="RayCast" parent="." index="2"]
+
+[node name="ShootTimer" type="Timer" parent="." index="3"]
 wait_time = 2.0
 
-[node name="Weapon" parent="." index="3" instance=ExtResource( 2 )]
+[node name="Weapon" parent="." index="4" instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0156765, 0.0376511, 9.81569 )
 
-[node name="drone_mk1" parent="." index="4" instance=ExtResource( 4 )]
+[node name="drone_mk1" parent="." index="5" instance=ExtResource( 4 )]
 transform = Transform( -1.62921e-06, 0, 10, 0, 10, 0, -10, 0, -1.62921e-06, 0, 0, 0 )

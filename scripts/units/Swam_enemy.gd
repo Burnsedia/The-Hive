@@ -19,8 +19,6 @@ func _ready():
 	add_to_group("zombies")
 	
 
-func _process(delta):
-	attack()
  
 func _physics_process(delta):
 	if dead:
@@ -34,7 +32,7 @@ func attack():
 	weapon.use()
 	can_shoot = false
 	timer.start()
-		
+
 		
 func kill():
 	dead = true
@@ -48,7 +46,7 @@ func move(delta):
 	var vec_to_player = player.translation - translation
 	vec_to_player = vec_to_player.normalized()
 	raycast.cast_to = vec_to_player * 1.5
-	look_at(vec_to_player,Vector3.UP)
+
 	move_and_collide(vec_to_player * speed/10 * delta)
 	
 

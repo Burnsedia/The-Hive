@@ -15,28 +15,16 @@ export(PackedScene) var bulit
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-<<<<<<< HEAD
+	Events.connect("shoot", self, "shoot")
 	shot_timer.wait_time = RoF
 	
 
 func use():
-=======
-	pass
+	shoot()
 	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func shoot():
->>>>>>> master
 	var projectile = bulit.instance()
 	add_child(projectile)
 		
-	
-		
-<<<<<<< HEAD
-
-
-=======
-		
-	
-		
->>>>>>> master
