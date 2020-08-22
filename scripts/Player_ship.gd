@@ -50,7 +50,7 @@ func hover_mode(delta):
 	if Input.is_action_just_pressed("combat_mode"):
 		ship_state = combat
 	
-h	mov_dir * speed * delta
+	mov_dir * speed * delta
 	move_and_slide(mov_dir)
 
 	
@@ -71,7 +71,10 @@ func combat_mode(delta):
 		rotate_object_local(Vector3(0,0,1), -turn_speed * delta)		
 	#stop moving player
 	if Input.is_action_just_pressed("ui_accept"):
-		Events.emit_signal("shoot")
+		weapon.shoot()
+		weapon2.shoot()
+		weapon3.shoot()
+		
 	if Input.is_action_just_pressed("hover_mode"):
 		ship_state = hover
 	mov_dir = transform.basis.z * speed * 5  * delta

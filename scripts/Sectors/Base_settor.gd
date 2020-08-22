@@ -12,6 +12,13 @@ var allied = false
 # has artifiact
 var contains_artifacts = false
 
+var radios = 8000
+
+export(PackedScene) var drone 
+export(PackedScene) var MotherShip
+export(PackedScene) var Station
+export(PackedScene) var astroids
+
 
 
 # nomber of astroids
@@ -25,5 +32,17 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+func _process(delta):
+	pass
+
+
+
+
+
+func spawn_astroids():
+	pass
+	
+	
+	
+func spawn_enemys():
+	pass
