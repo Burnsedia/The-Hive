@@ -187,7 +187,7 @@ _global_script_classes=[ {
 "base": "Area",
 "class": "weapon",
 "language": "GDScript",
-"path": "res://Weapon.gd"
+"path": "res://scripts/Weapon.gd"
 } ]
 _global_script_class_icons={
 "GSAIAgentLocation": "",
