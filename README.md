@@ -17,4 +17,4 @@ The Game with be releaced on Itch.io and F-droid as well as Google Play Store an
 
 
 
-<a href="https://www.patreon.com/bePatron?u=4972047" data-patreon-widget-type="become-patron-button">Become a Patron!</a><script async src="https://c6.patreon.com/becomePatronButton.bundle.js"></script>
+<a href="https://www.patreon.com/bePatron?u=4972047" data-patreon-widget-type="become-patron-button">Become a Patron!</a>
