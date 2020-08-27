@@ -10,10 +10,14 @@ export var speed = 1000
 export var max_speed = 512
 
 export var turn_speed = 8
-export var boot_speed = 2
+export var boot_speed_modifer = 2
 
+
+# I	need to rework the AI/Player logic
 #onready var StateMachine = $StateMachine
-#onready var Subsystems = $SubSystemStateMatchine
+onready var Subsystems = $SubSystemManager
+
+
 
 #behavers
 enum{hover,combat,evade,seek, ftl }

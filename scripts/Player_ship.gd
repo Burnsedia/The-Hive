@@ -5,17 +5,14 @@ var exsel = 128
 
 var mov_dir = Vector3()
 
-onready var weapon = $Weapon
-onready var weapon2 = $Weapon2
-onready var weapon3 = $Weapon3
+#onready var weapon = $Weapon
+#onready var weapon2 = $Weapon2
+#onready var weapon3 = $Weapon3
 
 # Called when the node enters the scene tree for the first time.
 func _ready():	
  get_tree().call_group("zombies", "set_player", self)
  get_tree().call_group("sectors", "set_player", self)
- Events.connect("shoot", weapon, "use")
- Events.connect("shoot", weapon2, "use")
- Events.connect("shoot", weapon3, "use")
 
 
 
@@ -71,9 +68,7 @@ func combat_mode(delta):
 		rotate_object_local(Vector3(0,0,1), -turn_speed * delta)		
 	#stop moving player
 	if Input.is_action_just_pressed("ui_accept"):
-		weapon.shoot()
-		weapon2.shoot()
-		weapon3.shoot()
+		Subsystems.WeaponManager.Fire()
 		
 	if Input.is_action_just_pressed("hover_mode"):
 		ship_state = hover

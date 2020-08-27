@@ -2,7 +2,6 @@
 
 [ext_resource path="res://Sceens/plasma_bullit.tscn" type="PackedScene" id=1]
 
-
 [sub_resource type="CapsuleShape" id=1]
 
 [node name="base_unit" type="KinematicBody"]

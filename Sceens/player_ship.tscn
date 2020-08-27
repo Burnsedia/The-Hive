@@ -6,24 +6,23 @@
 [ext_resource path="res://assets/Models/TEST2.glb" type="PackedScene" id=4]
 [ext_resource path="res://Sceens/trusters.tscn" type="PackedScene" id=5]
 
-
 [node name="player_ship" instance=ExtResource( 2 )]
 script = ExtResource( 1 )
 
-[node name="Weapon" parent="." index="1" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00769567, 0, 8.13999 )
-
-[node name="Weapon2" parent="." index="2" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.20578, 0, 3.82426 )
-
-[node name="Weapon3" parent="." index="3" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.21949, 0, 4.03646 )
-
-[node name="TEST2" parent="." index="4" instance=ExtResource( 4 )]
+[node name="TEST2" parent="." index="1" instance=ExtResource( 4 )]
 transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 0, 0, 0 )
 
-[node name="Spatial" parent="." index="5" instance=ExtResource( 5 )]
-transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 0.621481, 0, -7.43116 )
+[node name="Weapon" parent="SubSystemManager/WeaponManager" index="0" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00769567, 0, 10.532 )
 
-[node name="Spatial2" parent="." index="6" instance=ExtResource( 5 )]
-transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, -0.879776, 0, -7.43116 )
+[node name="Weapon2" parent="SubSystemManager/WeaponManager" index="1" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.20578, 0, 6.21622 )
+
+[node name="Weapon3" parent="SubSystemManager/WeaponManager" index="2" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.21949, 0, 6.42842 )
+
+[node name="Spatial" parent="SubSystemManager/MovermentManager" index="0" instance=ExtResource( 5 )]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 0.621481, 0, -7.6178 )
+
+[node name="Spatial2" parent="SubSystemManager/MovermentManager" index="1" instance=ExtResource( 5 )]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, -0.879776, 0, -7.6178 )
