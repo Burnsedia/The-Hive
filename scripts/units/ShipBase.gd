@@ -13,7 +13,7 @@ export var turn_speed = 8
 export var boot_speed_modifer = 2
 
 
-# I	need to rework the AI/Player logic
+# I	need to rework the AI
 #onready var StateMachine = $StateMachine
 onready var Subsystems = $SubSystemManager
 

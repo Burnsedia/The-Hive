@@ -68,7 +68,7 @@ func combat_mode(delta):
 		rotate_object_local(Vector3(0,0,1), -turn_speed * delta)		
 	#stop moving player
 	if Input.is_action_just_pressed("ui_accept"):
-		Subsystems.WeaponManager.Fire()
+		Subsystems.WeaponManager.Fire() 
 		
 	if Input.is_action_just_pressed("hover_mode"):
 		ship_state = hover

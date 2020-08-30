@@ -15,7 +15,7 @@ export(PackedScene) var bulit
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	Events.connect("shoot", self, "shoot")
+	Events.connect("shoot", self, "hoot")
 	shot_timer.wait_time = RoF
 	
 
