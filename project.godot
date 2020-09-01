@@ -157,7 +157,7 @@ _global_script_classes=[ {
 "base": "KinematicBody",
 "class": "Player",
 "language": "GDScript",
-"path": "res://scripts/KinematicBody.gd"
+"path": "res://scripts/units/Player/KinematicBody.gd"
 }, {
 "base": "Spatial",
 "class": "Sector",
@@ -174,6 +174,21 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://lbry/state/statematchine.gd"
 }, {
+"base": "Area",
+"class": "bullit",
+"language": "GDScript",
+"path": "res://scripts/systems/weapons/projectile.gd"
+}, {
+"base": "Node",
+"class": "powercompownit",
+"language": "GDScript",
+"path": "res://scripts/systems/power/powercompounit.gd"
+}, {
+"base": "RayCast",
+"class": "sensor",
+"language": "GDScript",
+"path": "res://scripts/systems/sensors/base_sensor.gd"
+}, {
 "base": "KinematicBody",
 "class": "ship",
 "language": "GDScript",
@@ -182,12 +197,12 @@ _global_script_classes=[ {
 "base": "ship",
 "class": "swam_enemy",
 "language": "GDScript",
-"path": "res://scripts/units/Swam_enemy.gd"
+"path": "res://scripts/units/Military/Swam_enemy.gd"
 }, {
 "base": "Area",
 "class": "weapon",
 "language": "GDScript",
-"path": "res://scripts/Weapon.gd"
+"path": "res://scripts/systems/weapons/Weapon.gd"
 } ]
 _global_script_class_icons={
 "GSAIAgentLocation": "",
@@ -223,6 +238,9 @@ _global_script_class_icons={
 "Sector": "",
 "State": "",
 "StateMachine": "",
+"bullit": "",
+"powercompownit": "",
+"sensor": "",
 "ship": "",
 "swam_enemy": "",
 "weapon": ""
@@ -235,7 +253,7 @@ run/main_scene="res://Sceens/Game_Root.tscn"
 
 [autoload]
 
-Events="*res://scripts/Globals/Global_weapon_events.gd"
+Events="*res://scripts/Globals/events.gd"
 
 [input]
 
