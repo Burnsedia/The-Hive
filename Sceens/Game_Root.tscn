@@ -36,11 +36,7 @@ astroids = ExtResource( 5 )
 transform = Transform( -1, 0, 3.25841e-07, 0, 1, 0, -3.25841e-07, 0, -1, 0, 0, 0 )
 
 [node name="Camera" type="Camera" parent="sectors/Blue-Nebla-RedStare/player_ship"]
-<<<<<<< HEAD
 transform = Transform( -1, 1.40709e-08, -3.25537e-07, 0, 0.999067, 0.0431834, 3.25841e-07, 0.0431834, -0.999067, -8.18521e-06, 6.92278, -25.1204 )
-=======
-transform = Transform( -1, 1.40709e-08, -3.25537e-07, 0, 0.999067, 0.0431834, 3.25841e-07, 0.0431834, -0.999067, -8.31934e-06, 8.18744, -25.532 )
->>>>>>> master
 far = 8192.0
 
 [node name="enemy" parent="sectors/Blue-Nebla-RedStare" instance=ExtResource( 3 )]
