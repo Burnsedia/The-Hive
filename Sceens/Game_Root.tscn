@@ -34,6 +34,8 @@ astroids = ExtResource( 5 )
 
 [node name="player_ship" parent="sectors/Blue-Nebla-RedStare" instance=ExtResource( 2 )]
 transform = Transform( -1, 0, 3.25841e-07, 0, 1, 0, -3.25841e-07, 0, -1, 0, 0, 0 )
+speed = 1024
+max_speed = 4096
 
 [node name="Camera" type="Camera" parent="sectors/Blue-Nebla-RedStare/player_ship"]
 transform = Transform( -1, 1.40709e-08, -3.25537e-07, 0, 0.999067, 0.0431834, 3.25841e-07, 0.0431834, -0.999067, -8.18521e-06, 6.92278, -25.1204 )

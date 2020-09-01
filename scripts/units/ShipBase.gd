@@ -34,11 +34,12 @@ var ship_state = combat
 
 var mov_vec = Vector3()
 func _ready():
-	Subsystems.init()
-	power.init()
-	engines.init()
-	sensors.init()
-	defenses.init()
+#	Subsystems.init()
+#	power.init()
+#	engines.init()
+#	sensors.init()
+#	defenses.init()
+	pass
 
 func dmage():
 	pass
