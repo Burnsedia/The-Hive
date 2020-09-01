@@ -16,6 +16,9 @@ export var boot_speed_modifer = 2
 # I	need to rework the AI
 #onready var StateMachine = $StateMachine
 onready var Subsystems = $SubSystemManager
+onready var weapons = $SubSystemManger/WeaponManger
+
+
 
 
 

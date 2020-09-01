@@ -5,7 +5,7 @@ var exsel = 128
 
 var mov_dir = Vector3()
 
-#onready var weapon = $Weapon
+
 #onready var weapon2 = $Weapon2
 #onready var weapon3 = $Weapon3
 
@@ -68,7 +68,7 @@ func combat_mode(delta):
 		rotate_object_local(Vector3(0,0,1), -turn_speed * delta)		
 	#stop moving player
 	if Input.is_action_just_pressed("ui_accept"):
-		Subsystems.WeaponManager.Fire() 
+		weapons.fire()
 		
 	if Input.is_action_just_pressed("hover_mode"):
 		ship_state = hover

@@ -16,21 +16,7 @@ func _init():
 	pass
 
 func Fire(cur_weapon: weapon):
-	if cur_weapon.has_method("use"):
-		cur_weapon.get_cur_weapon().use()
-		
+	emit_signal("shoot")
 
-func set_cur_weapon():
-	pass
-
-func get_cur_weapon(cur_weapon: weapon):
-	for wn in weapons:
-		if wn == weapon:
-			wn = cur_weapon
-		return cur_weapon
-	
-func get_avaible_weapons():
-	pass
-
-func cur_weapon_is_overheated(heatLimate: int):
-	pass
+func init_weapons():
+	Events.connect("shoot", weapons, "use")
