@@ -19,12 +19,12 @@ func _ready():
 	pass
 	
 
-func use(user):
-	shoot(user)
+func use(user, target:ship = null):
+	shoot(user, target)
 	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func shoot(user):
+func shoot(user, target = null):
 	var projectile = bulit.instance()
 	projectile.set_user(user)
 	add_child(projectile)

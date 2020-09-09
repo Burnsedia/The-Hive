@@ -9,6 +9,12 @@ var exsel = 128
 var mov_dir = Vector3()
 
 onready var gun = $Weapon
+onready var luncher = $MissileLuncher
+onready var luncher2 = $MissileLuncher2
+onready var sensors = $sensor
+
+var target
+
 
 
 
@@ -17,7 +23,8 @@ func _ready():
  get_tree().call_group("zombies", "set_player", self)
  get_tree().call_group("sectors", "set_player", self)
  Events.connect("shoot", gun, "use")
-
+ Events.connect("fire_missile", luncher, "use")
+ Events.connect("fire_missile", luncher2, "use")
 
 
 
@@ -74,12 +81,21 @@ func combat_mode(delta):
 	#stop moving player
 	if Input.is_action_pressed("shoot"):
 		gun.use(self)
+	if Input.is_action_pressed("fire_missle"):
+		if !target == null:
+			luncher.use(self, target)
+			luncher.use(self, target)
+	if Input.is_action_pressed("lookon"):
+		set_target()
 		
 	if Input.is_action_just_pressed("hover_mode"):
 		ship_state = States.hover
 	mov_dir = transform.basis.z * speed * 5  * delta
 	mov_vec = mov_vec.linear_interpolate(mov_dir,72 * delta)
 	move_and_slide(mov_vec)
+
+func set_target():
+	target = sensors.get_collider()
 
 
 func max_vec():

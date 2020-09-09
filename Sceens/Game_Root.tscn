@@ -77,5 +77,5 @@ speed = 2048
 max_speed = 4096
 
 [node name="Camera" type="Camera" parent="sectors/Blue-Nebla-RedStare/player_ship"]
-transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 0, 2.42542, -0.679352 )
+transform = Transform( -1, -1.42109e-14, -3.25841e-07, -1.42109e-14, 1, -4.63048e-21, 3.25841e-07, 0, -1, 0, 7.32342, -20.8158 )
 far = 8192.0
