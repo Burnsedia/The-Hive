@@ -1,12 +1,13 @@
+
 extends Area
 class_name weapon
 
 var damage = 10
 var shot_timer = Timer.new()
 var RoF = 10
-export(PackedScene) var bulit
-var pos = global_transform
+var player_owned = false
 
+export(PackedScene) var bulit
 
 # Declare member variables here. Examples:
 # var a = 2
@@ -15,14 +16,17 @@ var pos = global_transform
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	Events.connect("shoot", self, "_on_shoot")
-	shot_timer.wait_time = RoF
+	pass
 	
 
-func use():
-	emit_signal("shoot", rotation, pos )
+func use(user):
+	shoot(user)
 	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-
+func shoot(user):
+	var projectile = bulit.instance()
+	projectile.set_user(user)
+	add_child(projectile)
 		
+

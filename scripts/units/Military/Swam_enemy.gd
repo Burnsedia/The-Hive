@@ -11,6 +11,7 @@ onready var timer = $ShootTimer
 
 onready var weapon = $Weapon
 
+var face = GSAIFace
 
  
 var player = null
@@ -32,7 +33,7 @@ func _physics_process(delta):
 	
 func attack():
 	if tgarget.get_collider() == player:
-		weapon.use()
+		weapon.use(self)
 		can_shoot = false
 		timer.start()
 
@@ -49,11 +50,15 @@ func move(delta):
 	var vec_to_player = player.translation - translation
 	vec_to_player = vec_to_player.normalized()
 	raycast.cast_to = vec_to_player * 1.5
-	look_at(vec_to_player, Vector3.UP)
 	move_and_collide(vec_to_player * speed/10 * delta)
 	
 
 func _on_ShootTimer_timeout():
 	can_shoot = true
 	timer.start()
-	
+
+func damage(damage):
+	print("hit by")
+	hp -= damage
+	if hp <= 0:
+		kill()

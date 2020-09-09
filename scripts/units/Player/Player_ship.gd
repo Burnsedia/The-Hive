@@ -1,19 +1,23 @@
 extends ship
+class_name Player
+
+
 
 export var thrust = 1.0
 var exsel = 128
 
 var mov_dir = Vector3()
 
-onready var weapons = $SubSystemManager/WeaponManager
+onready var gun = $Weapon
 
-#onready var weapon2 = $Weapon2
-#onready var weapon3 = $Weapon3
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():	
  get_tree().call_group("zombies", "set_player", self)
  get_tree().call_group("sectors", "set_player", self)
+ Events.connect("shoot", gun, "use")
+
 
 
 
@@ -24,10 +28,10 @@ func _physics_process(delta):
 	
 func move_input(delta):
 	match ship_state:
-		combat:
+		States.combat:
 			combat_mode(delta)
 			move_and_slide(mov_vec)
-		hover:
+		States.hover:
 			hover_mode(delta)
 		
 
@@ -46,7 +50,7 @@ func hover_mode(delta):
 	if Input.is_action_just_pressed("ui_select"):
 		mov_dir.z + thrust
 	if Input.is_action_just_pressed("combat_mode"):
-		ship_state = combat
+		ship_state = States.combat
 	
 	mov_dir * speed * delta
 	move_and_collide(mov_dir)
@@ -68,11 +72,11 @@ func combat_mode(delta):
 	if Input.is_action_pressed("roll_left"):
 		rotate_object_local(Vector3(0,0,1), -turn_speed * delta)		
 	#stop moving player
-	if Input.is_action_just_pressed("ui_accept"):
-		weapons.Fire()
+	if Input.is_action_pressed("shoot"):
+		gun.use(self)
 		
 	if Input.is_action_just_pressed("hover_mode"):
-		ship_state = hover
+		ship_state = States.hover
 	mov_dir = transform.basis.z * speed * 5  * delta
 	mov_vec = mov_vec.linear_interpolate(mov_dir,72 * delta)
 	move_and_slide(mov_vec)
@@ -85,6 +89,11 @@ func max_vec():
 		mov_vec.y = max_speed.y
 	if mov_vec.z > max_speed.z:
 		mov_vec.z = max_speed.z	
-	
+		
+func damage(damage):
+	hp -= damage
+	print(hp)
+	if hp <= 0:
+		queue_free()
 
 	

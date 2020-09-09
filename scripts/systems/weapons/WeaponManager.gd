@@ -22,28 +22,20 @@ var weapon_unlocked = {
 func _ready():
 	pass
 
-func _init():
-	pass
+
 	
 
 func Fire():
-	weapons[cur_weapon].use()
-	
-func set_weapon(index:int):
-	if index < 0 or index >= weapon_unlocked.size():
-		return 
-	if !weapon_unlocked[cur_slot]:
-		return 
-	cur_weapon = weapons[index]
-	return cur_weapon
+	for weap in weapons:
+		if weap.has_method("use"):
+			weap.use()
+			
+
 	
 func next_weapon(slot_index):
 	pass
 
-func switch_weapon():
-	cur_weapon = (cur_slot +1) % weapon_unlocked.size()
-	if !weapon_unlocked[cur_weapon]: switch_weapon()
-	else: set_weapon(cur_weapon)
+
 	
 
 

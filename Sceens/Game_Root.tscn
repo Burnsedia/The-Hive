@@ -3,7 +3,7 @@
 [ext_resource path="res://Sceens/Hive Mother Ship.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Sceens/player_ship.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Sceens/enemy.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Sceens/Red Sector.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scripts/units/HiveStation.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Sceens/Asteroid.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Sceens/BlueNebla-RedStare.tscn" type="PackedScene" id=6]
 
@@ -25,21 +25,57 @@ margin_bottom = 20.0
 
 [node name="sectors" type="Node" parent="."]
 
-[node name="Red Sector" parent="sectors" instance=ExtResource( 4 )]
+[node name="Blue-Nebla-RedStare" parent="sectors" instance=ExtResource( 6 )]
 drone = ExtResource( 3 )
 MotherShip = ExtResource( 1 )
 astroids = ExtResource( 5 )
 
-[node name="Blue-Nebla-RedStare" parent="sectors" instance=ExtResource( 6 )]
+[node name="HiveStation" parent="sectors/Blue-Nebla-RedStare" instance=ExtResource( 4 )]
+transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 10, -513.74, 0, 45.7843 )
+hp = 1000
+
+[node name="HiveStation2" parent="sectors/Blue-Nebla-RedStare" instance=ExtResource( 4 )]
+transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 10, 188.16, 0, 45.7843 )
+hp = 1000
+
+[node name="HiveStation3" parent="sectors/Blue-Nebla-RedStare" instance=ExtResource( 4 )]
+transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 10, -212.589, -198.097, 45.7843 )
+hp = 1000
+
+[node name="HiveStation4" parent="sectors/Blue-Nebla-RedStare" instance=ExtResource( 4 )]
+transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 10, -212.589, 196.756, 45.7843 )
+hp = 1000
+
+[node name="enemy" parent="sectors/Blue-Nebla-RedStare" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -25, -25, -25 )
+
+[node name="enemy2" parent="sectors/Blue-Nebla-RedStare" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 25, 25, 25 )
+
+[node name="enemy3" parent="sectors/Blue-Nebla-RedStare" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -25, -50 )
+
+[node name="enemy4" parent="sectors/Blue-Nebla-RedStare" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 25, 50 )
+
+[node name="enemy5" parent="sectors/Blue-Nebla-RedStare" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -50, 0 )
+
+[node name="enemy6" parent="sectors/Blue-Nebla-RedStare" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 50, 0 )
+
+[node name="enemy7" parent="sectors/Blue-Nebla-RedStare" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 50, 0, 0 )
+
+[node name="enemy8" parent="sectors/Blue-Nebla-RedStare" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -50, 0, 0 )
 
 [node name="player_ship" parent="sectors/Blue-Nebla-RedStare" instance=ExtResource( 2 )]
-transform = Transform( -1, 0, 3.25841e-07, 0, 1, 0, -3.25841e-07, 0, -1, 0, 0, 0 )
-speed = 1024
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 500 )
+hp = 500
+speed = 2048
 max_speed = 4096
 
 [node name="Camera" type="Camera" parent="sectors/Blue-Nebla-RedStare/player_ship"]
-transform = Transform( -1, 1.40709e-08, -3.25537e-07, 0, 0.999067, 0.0431834, 3.25841e-07, 0.0431834, -0.999067, -8.18521e-06, 6.92278, -25.1204 )
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 0, 2.42542, -0.679352 )
 far = 8192.0
-
-[node name="enemy" parent="sectors/Blue-Nebla-RedStare" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -400 )

@@ -1,9 +1,9 @@
 extends Area
 class_name bullit
 
-var BULLET_SPEED = 70
-var BULLET_DAMAGE = 15
+export var BULLET_DAMAGE = 50
 
+var user
 const KILL_TIMER = 4
 var timer = 0 
 
@@ -15,9 +15,23 @@ func _ready():
 	connect("body_entered", self, "collided")
 	
 
+func set_user(u):
+	user = u
+
 func _process(delta):
 	var forward_dir = transform.basis.z.normalized() * speed * delta
 	global_translate(forward_dir)
 	timer += delta
 	if timer >= KILL_TIMER:
 		queue_free()
+
+
+func _on_Builit_body_entered(body):
+	if body == user:
+		return 
+	body.damage(BULLET_DAMAGE)
+	print(body.name)
+		
+		
+		
+		
