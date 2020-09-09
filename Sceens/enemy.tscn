@@ -12,6 +12,8 @@
 ] instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 script = ExtResource( 3 )
+speed = 2048
+max_speed = 4096
 
 [node name="CollisionShape" parent="." index="0"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.41286e-07, 0, 2.20399 )
