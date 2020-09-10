@@ -2,6 +2,7 @@ extends Area
 class_name MissileLuncher
 
 export(PackedScene) var missile
+
 func use(user, target):
 	shoot(user,target)
 	

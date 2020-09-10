@@ -268,11 +268,25 @@ _global_script_class_icons={
 
 config/name="The-Hive"
 run/main_scene="res://Sceens/Game_Root.tscn"
-boot_splash/bg_color=Color( 0.141176, 0.141176, 0.141176, 1 )
+boot_splash/bg_color=Color( 0, 0, 0, 1 )
 
 [autoload]
 
 Events="*res://scripts/Globals/events.gd"
+UserData="*res://addons/github-integration/scripts/user_data.gd"
+IconLoaderGithub="*res://addons/github-integration/scripts/IconLoaderGithub.gd"
+
+[display]
+
+window/size/width=1920
+window/size/height=1080
+window/size/resizable=false
+window/size/borderless=true
+window/size/fullscreen=true
+
+[editor_plugins]
+
+enabled=PoolStringArray( "github-integration", "gut" )
 
 [input]
 
@@ -353,3 +367,7 @@ fire_missle={
 "events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":70,"unicode":0,"echo":false,"script":null)
  ]
 }
+
+[input_devices]
+
+pointing/emulate_touch_from_mouse=true

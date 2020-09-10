@@ -81,11 +81,13 @@ func combat_mode(delta):
 	#stop moving player
 	if Input.is_action_pressed("shoot"):
 		gun.use(self)
-	if Input.is_action_pressed("fire_missle"):
+	if Input.is_action_just_pressed("fire_missle"):
 		if !target == null:
 			luncher.use(self, target)
-			luncher.use(self, target)
+			print("fired missile at " + str(target))
+			
 	if Input.is_action_pressed("lookon"):
+		print("looked on to " + str(target))
 		set_target()
 		
 	if Input.is_action_just_pressed("hover_mode"):

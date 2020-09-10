@@ -9,7 +9,7 @@ export var hp = 100
 export var speed = 1024
 export var max_speed = 2048
 
-export var turn_speed = 8
+export var turn_speed = 2
 export var boot_speed_modifer = 2
 
 enum States {

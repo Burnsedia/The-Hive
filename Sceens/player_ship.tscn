@@ -13,15 +13,18 @@
 "player",
 ] instance=ExtResource( 2 )]
 script = ExtResource( 1 )
+speed = 0
+max_speed = 0
+turn_speed = 8
 
 [node name="MissileLuncher" parent="." index="0" instance=ExtResource( 7 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 4 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8, -2.25, 3 )
 
 [node name="MissileLuncher2" parent="." index="1" instance=ExtResource( 7 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 4 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8, -2.25, 3 )
 
 [node name="TEST2" parent="." index="3" instance=ExtResource( 4 )]
-transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 0, 0, 0 )
+transform = Transform( -1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, 0, 0, 0 )
 
 [node name="Weapon" parent="." index="4" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 9.08888 )
@@ -35,7 +38,7 @@ transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, -0.4904
 transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 0.497506, 0, -7 )
 
 [node name="sensor" type="RayCast" parent="." index="7"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.832675, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.722257, 0 )
 enabled = true
 cast_to = Vector3( 0, 0, 100000 )
 script = ExtResource( 8 )

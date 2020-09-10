@@ -93,4 +93,3 @@ anims/alpha_in = SubResource( 1 )
 anims/alpha_out = SubResource( 2 )
 anims/ball_center = SubResource( 3 )
 anims/default = SubResource( 4 )
-

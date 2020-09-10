@@ -1,8 +1,7 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://scripts/units/BaseStation.gd" type="Script" id=1]
 [ext_resource path="res://assets/Models/Material_001.material" type="Material" id=2]
-[ext_resource path="res://Sceens/enemy.tscn" type="PackedScene" id=3]
 [ext_resource path="res://assets/Models/Material.material" type="Material" id=4]
 [ext_resource path="res://assets/Models/Material_002.material" type="Material" id=5]
 [ext_resource path="res://assets/Models/read hull.material" type="Material" id=6]
@@ -58,7 +57,6 @@ extents = Vector3( 11.1882, 2.58604, 19.4103 )
 [node name="HiveStation" type="StaticBody"]
 script = ExtResource( 1 )
 hp = 500
-defiances = ExtResource( 3 )
 
 [node name="Cube" type="MeshInstance" parent="."]
 mesh = SubResource( 1 )
@@ -69,5 +67,4 @@ material/2 = SubResource( 2 )
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 shape = SubResource( 3 )
