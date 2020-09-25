@@ -8,7 +8,7 @@
 [ext_resource path="res://Sceens/Area.tscn" type="PackedScene" id=6]
 
 [node name="enemy" groups=[
-"zombies",
+"hive",
 ] instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 script = ExtResource( 3 )
@@ -58,3 +58,4 @@ transform = Transform( -1.62921e-06, 0, 10, 0, 10, 0, -10, 0, -1.62921e-06, 0.06
 
 [node name="Spatial" parent="." index="10" instance=ExtResource( 5 )]
 transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 7.91645e-07, 0, -2.92955 )
+[connection signal="timeout" from="ShootTimer" to="." method="_on_ShootTimer_timeout"]

@@ -35,6 +35,7 @@ func combat():
 
 func move(delta):
 	pass
+
 func die():
 	if hp >= 0:
 		queue_free()	

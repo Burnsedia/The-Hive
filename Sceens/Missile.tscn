@@ -11,16 +11,11 @@ material = SubResource( 1 )
 
 [sub_resource type="Skin" id=3]
 
-[sub_resource type="CapsuleShape" id=4]
-radius = 0.578072
-height = 3.59597
+[sub_resource type="SphereShape" id=4]
+radius = 20.3021
 
 [node name="missile" type="Area"]
-gravity = 0.0
-linear_damp = 0.0
-angular_damp = 0.0
-monitoring = false
-monitorable = false
+input_ray_pickable = false
 script = ExtResource( 2 )
 speed = 1000
 
@@ -35,11 +30,11 @@ transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 0, 0, -
 
 [node name="RayCast" type="RayCast" parent="."]
 
-[node name="CollisionShape" type="CollisionShape" parent="."]
-shape = SubResource( 4 )
-
 [node name="Timer" type="Timer" parent="."]
 wait_time = 10.0
 autostart = true
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+shape = SubResource( 4 )
 [connection signal="body_entered" from="." to="." method="_on_missile_body_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

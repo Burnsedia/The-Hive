@@ -1,4 +1,4 @@
-extends Node
+extends ship
 
 
 # Declare member variables here. Examples:
@@ -10,16 +10,14 @@ extends Node
 func _ready():
 	pass # Replace with function body.
 
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
-
-func switch_sceen(sceen):
-	pass
-
-func mission():
-	pass
-
-
-
-
+func damage(damage):
+	print("damage taken")
+	hp -= damage
+	print(hp)
+	print("hit by" )
+	if hp <= 0:
+		self.queue_free()

@@ -1,5 +1,9 @@
 extends Node
 
 signal shoot()
-signal seek
+signal stationDistroyed(station, type)
+signal ShipDistroyed()
+
+signal MotherShipDistroyed()
+
 

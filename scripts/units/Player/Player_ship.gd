@@ -1,37 +1,34 @@
 extends ship
 class_name Player
 
-
-
 export var thrust = 1.0
-var exsel = 128
+export var SensorRanger = 100.0
 
-var mov_dir = Vector3()
-
+# Child Componits and ther manager classes
+# Weapon interface this will be replaced with a weapon manger 
+# It will allow to control npc ships
 onready var gun = $Weapon
 onready var luncher = $MissileLuncher
 onready var luncher2 = $MissileLuncher2
 onready var sensors = $sensor
 
+#Local Class Properties
+var exsel = 128
+var mov_dir = Vector3()
 var target
-
-
-
 
 # Called when the node enters the scene tree for the first time.
 func _ready():	
- get_tree().call_group("zombies", "set_player", self)
+ get_tree().call_group("hive", "set_player", self)
  get_tree().call_group("sectors", "set_player", self)
  Events.connect("shoot", gun, "use")
  Events.connect("fire_missile", luncher, "use")
  Events.connect("fire_missile", luncher2, "use")
-
-
+ add_to_group("player")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
 	move_input(delta)
-
 	
 func move_input(delta):
 	match ship_state:
@@ -81,37 +78,33 @@ func combat_mode(delta):
 	#stop moving player
 	if Input.is_action_pressed("shoot"):
 		gun.use(self)
+	if Input.is_action_just_pressed("ui_cancel"):
+		get_tree().change_scene("res://MainManu.tscn")
 	if Input.is_action_just_pressed("fire_missle"):
 		if !target == null:
 			luncher.use(self, target)
 			print("fired missile at " + str(target))
 			
-	if Input.is_action_pressed("lookon"):
+	if Input.is_action_just_pressed("lookon"):
 		print("looked on to " + str(target))
 		set_target()
 		
 	if Input.is_action_just_pressed("hover_mode"):
 		ship_state = States.hover
 	mov_dir = transform.basis.z * speed * 5  * delta
-	mov_vec = mov_vec.linear_interpolate(mov_dir,72 * delta)
+	mov_vec = mov_vec.linear_interpolate(mov_dir, 10 * delta)
 	move_and_slide(mov_vec)
 
 func set_target():
 	target = sensors.get_collider()
 
-
-func max_vec():
-	if mov_vec.x > max_speed.x:
-		mov_vec.x = max_speed.x
-	if mov_vec.y > max_speed.y:
-		mov_vec.y = max_speed.y
-	if mov_vec.z > max_speed.z:
-		mov_vec.z = max_speed.z	
-		
+func auto_target():
+	if sensors.get_collider():
+		pass 
+			
 func damage(damage):
 	hp -= damage
 	print(hp)
 	if hp <= 0:
 		queue_free()
-
-	
+		

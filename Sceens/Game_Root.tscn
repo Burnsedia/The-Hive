@@ -13,138 +13,143 @@
 [node name="sectors" type="Node" parent="."]
 
 [node name="Blue-Nebla-RedStare" parent="sectors" instance=ExtResource( 6 )]
+radius = 5000
 drone = ExtResource( 3 )
 MotherShip = ExtResource( 1 )
+Stations = ExtResource( 4 )
 astroids = ExtResource( 5 )
+astroid_count = 5000
 
 [node name="player_ship" parent="sectors/Blue-Nebla-RedStare" instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0823793, 1.60303, -1043.93 )
-speed = 3000
-max_speed = 8096
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1048 )
+speed = 2048
+turn_speed = 8
 
 [node name="Camera" type="Camera" parent="sectors/Blue-Nebla-RedStare/player_ship"]
-transform = Transform( -1, 0, 3.25841e-07, 0, 1, 0, -3.25841e-07, 0, -1, 0, 2.5, -3 )
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 0, 4.18912, -12.7744 )
+fov = 60.0
 far = 8192.0
-
-[node name="HiveStation" parent="sectors/Blue-Nebla-RedStare" instance=ExtResource( 4 )]
-transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 10, -513.74, 0, 45.7843 )
-hp = 1000
-drone = ExtResource( 3 )
-
-[node name="HiveStation2" parent="sectors/Blue-Nebla-RedStare" instance=ExtResource( 4 )]
-transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 10, 188.16, 0, 45.7843 )
-hp = 1000
-drone = ExtResource( 3 )
-
-[node name="HiveStation3" parent="sectors/Blue-Nebla-RedStare" instance=ExtResource( 4 )]
-transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 10, -212.589, -198.097, 45.7843 )
-hp = 1000
-drone = ExtResource( 3 )
-
-[node name="HiveStation4" parent="sectors/Blue-Nebla-RedStare" instance=ExtResource( 4 )]
-transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 10, -212.589, 196.756, 45.7843 )
-hp = 1000
-drone = ExtResource( 3 )
-
-[node name="HiveStation5" parent="sectors/Blue-Nebla-RedStare" instance=ExtResource( 4 )]
-transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 10, -389.616, -492.393, 657.466 )
-hp = 1000
-drone = ExtResource( 3 )
-
-[node name="HiveStation6" parent="sectors/Blue-Nebla-RedStare" instance=ExtResource( 4 )]
-transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 10, 312.284, -492.393, 657.466 )
-hp = 1000
-drone = ExtResource( 3 )
-
-[node name="HiveStation7" parent="sectors/Blue-Nebla-RedStare" instance=ExtResource( 4 )]
-transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 10, -88.465, -690.49, 657.466 )
-hp = 1000
-drone = ExtResource( 3 )
-
-[node name="HiveStation8" parent="sectors/Blue-Nebla-RedStare" instance=ExtResource( 4 )]
-transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 10, -88.465, -295.637, 657.466 )
-hp = 1000
-drone = ExtResource( 3 )
-
-[node name="HiveStation9" parent="sectors/Blue-Nebla-RedStare" instance=ExtResource( 4 )]
-transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 10, -1304.76, -191.267, 45.7843 )
-hp = 1000
-drone = ExtResource( 3 )
-
-[node name="HiveStation10" parent="sectors/Blue-Nebla-RedStare" instance=ExtResource( 4 )]
-transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 10, -602.861, -191.267, 45.7843 )
-hp = 1000
-drone = ExtResource( 3 )
-
-[node name="HiveStation11" parent="sectors/Blue-Nebla-RedStare" instance=ExtResource( 4 )]
-transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 10, -1003.61, -389.364, 45.7843 )
-hp = 1000
-drone = ExtResource( 3 )
-
-[node name="HiveStation12" parent="sectors/Blue-Nebla-RedStare" instance=ExtResource( 4 )]
-transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 10, -1003.61, 5.48911, 45.7843 )
-hp = 1000
-drone = ExtResource( 3 )
-
-[node name="HiveStation13" parent="sectors/Blue-Nebla-RedStare" instance=ExtResource( 4 )]
-transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 10, -1180.64, -683.659, 657.466 )
-hp = 1000
-drone = ExtResource( 3 )
-
-[node name="HiveStation14" parent="sectors/Blue-Nebla-RedStare" instance=ExtResource( 4 )]
-transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 10, -478.737, -683.659, 657.466 )
-hp = 1000
-drone = ExtResource( 3 )
-
-[node name="HiveStation15" parent="sectors/Blue-Nebla-RedStare" instance=ExtResource( 4 )]
-transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 10, -879.486, -881.756, 657.466 )
-hp = 1000
-drone = ExtResource( 3 )
-
-[node name="HiveStation16" parent="sectors/Blue-Nebla-RedStare" instance=ExtResource( 4 )]
-transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 10, -879.486, -486.903, 657.466 )
-hp = 1000
-drone = ExtResource( 3 )
 
 [node name="UI" type="CanvasLayer" parent="."]
 
-[node name="GridContainer" type="GridContainer" parent="UI"]
+[node name="JoySticks" type="Node" parent="UI"]
+
+[node name="GridContainer" type="GridContainer" parent="UI/JoySticks"]
+visible = false
 anchor_left = 0.75
 anchor_top = 0.5
-anchor_right = 0.894
-anchor_bottom = 0.645
-margin_left = 1.0
-margin_top = 5.0
-margin_right = 1.0
-margin_bottom = 5.0
+anchor_right = 0.75
+anchor_bottom = 0.5
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="VBoxContainer" type="VBoxContainer" parent="UI/GridContainer"]
-alignment = 1
+[node name="HBoxContainer" type="HBoxContainer" parent="UI/JoySticks/GridContainer"]
 
-[node name="Analog" parent="UI/GridContainer/VBoxContainer" instance=ExtResource( 7 )]
+[node name="Analog" parent="UI/JoySticks/GridContainer/HBoxContainer" instance=ExtResource( 7 )]
+position = Vector2( 0, 4 )
 
-[node name="HSplitContainer" type="HSplitContainer" parent="UI/GridContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/JoySticks/GridContainer"]
 margin_top = 4.0
 margin_bottom = 4.0
+alignment = 1
 
-[node name="GridContainer3" type="GridContainer" parent="UI"]
+[node name="GridContainer3" type="GridContainer" parent="UI/JoySticks"]
+visible = false
 anchor_left = 0.25
 anchor_top = 0.5
 anchor_right = 0.25
 anchor_bottom = 0.5
 margin_left = 1.0
 margin_top = 1.0
-margin_right = 1.0
-margin_bottom = 1.0
+margin_right = 13.0
+margin_bottom = 69.0
 columns = 4
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="VBoxContainer" type="VBoxContainer" parent="UI/GridContainer3"]
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/JoySticks/GridContainer3"]
 alignment = 1
 
-[node name="Analog" parent="UI/GridContainer3/VBoxContainer" instance=ExtResource( 7 )]
+[node name="Analog2" parent="UI/JoySticks/GridContainer3/VBoxContainer" instance=ExtResource( 7 )]
+
+[node name="TabContainer" type="TabContainer" parent="UI"]
+anchor_right = 1.0
+margin_left = 2.0
+margin_top = -1.0
+margin_right = 22.0
+margin_bottom = 55.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Map" type="Button" parent="UI/TabContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+text = "Map"
+flat = true
+
+[node name="Systems" type="Button" parent="UI/TabContainer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+text = "Subsystems"
+
+[node name="Comms" type="Button" parent="UI/TabContainer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+text = "Commitations"
+
+[node name="Power" type="Button" parent="UI/TabContainer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+text = "PoweerBus"
+
+[node name="Inventory" type="Button" parent="UI/TabContainer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+text = "Invitory"
+
+[node name="Sensors" type="Button" parent="UI/TabContainer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+text = "Sensors"
+
+[node name="Tech" type="Button" parent="UI/TabContainer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+text = "Technology"

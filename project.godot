@@ -184,6 +184,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://scripts/units/BaseStation.gd"
 }, {
+"base": "Spatial",
+"class": "TerentBase",
+"language": "GDScript",
+"path": "res://scripts/units/TerentBase.gd"
+}, {
 "base": "Area",
 "class": "bullit",
 "language": "GDScript",
@@ -255,6 +260,7 @@ _global_script_class_icons={
 "State": "",
 "StateMachine": "",
 "Station": "",
+"TerentBase": "",
 "bullit": "",
 "missile": "",
 "powercompownit": "",
@@ -267,7 +273,7 @@ _global_script_class_icons={
 [application]
 
 config/name="The-Hive"
-run/main_scene="res://Sceens/Game_Root.tscn"
+run/main_scene="res://MainManu.tscn"
 boot_splash/bg_color=Color( 0, 0, 0, 1 )
 
 [autoload]
@@ -278,9 +284,6 @@ IconLoaderGithub="*res://addons/github-integration/scripts/IconLoaderGithub.gd"
 
 [display]
 
-window/size/width=1920
-window/size/height=1080
-window/size/resizable=false
 window/size/borderless=true
 window/size/fullscreen=true
 
@@ -370,4 +373,8 @@ fire_missle={
 
 [input_devices]
 
-pointing/emulate_touch_from_mouse=true
+pointing/emulate_mouse_from_touch=false
+
+[rendering]
+
+environment/default_clear_color=Color( 0.141176, 0.141176, 0.141176, 1 )
