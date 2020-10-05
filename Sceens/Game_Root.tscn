@@ -97,6 +97,7 @@ text = "Map"
 flat = true
 
 [node name="Systems" type="Button" parent="UI/TabContainer"]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 4.0
@@ -106,6 +107,7 @@ margin_bottom = -4.0
 text = "Subsystems"
 
 [node name="Comms" type="Button" parent="UI/TabContainer"]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 4.0
@@ -115,6 +117,7 @@ margin_bottom = -4.0
 text = "Commitations"
 
 [node name="Power" type="Button" parent="UI/TabContainer"]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 4.0
@@ -124,6 +127,7 @@ margin_bottom = -4.0
 text = "PoweerBus"
 
 [node name="Inventory" type="Button" parent="UI/TabContainer"]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 4.0
@@ -133,6 +137,7 @@ margin_bottom = -4.0
 text = "Invitory"
 
 [node name="Sensors" type="Button" parent="UI/TabContainer"]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 4.0
@@ -142,6 +147,7 @@ margin_bottom = -4.0
 text = "Sensors"
 
 [node name="Tech" type="Button" parent="UI/TabContainer"]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 4.0
