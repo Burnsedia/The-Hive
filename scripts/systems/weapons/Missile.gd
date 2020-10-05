@@ -38,7 +38,7 @@ func seek():
 		vec_to_target = vec_to_target.normalized() * speed
 		steer = (vec_to_target - val).normalized() * force 
 		return steer
-	else:
+	if !target:
 		steer = Vector3()
 		return steer
 		

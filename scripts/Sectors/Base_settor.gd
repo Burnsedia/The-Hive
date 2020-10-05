@@ -30,17 +30,17 @@ export var station_count = 5
 # astoids
 export (bool) var random_rotation
 export (Vector2) var scale_range
-export var astroid_count = 500
+export var astroid_count = 5000
 
 # number of artifacts if there are any
 var artifacts_count = rand_range(2.0, 16.0)
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	for i in station_count:
-		spawn_stations()
-	for i in astroid_count:
-		spawn_astroids()	
+#	for i in station_count:
+#		spawn_stations()
+#	for i in astroid_count:
+#		spawn_astroids()	
 	for i in enemy_drone_count:
 		spawn_drones()
 	for i in enemy_mothership_count:
@@ -85,7 +85,6 @@ func spawn_Hives():
 	# set position
 	mothership.translation = spawn_position
 	# set rotation
-
 	add_child(mothership)
 	
 # Spawn enemy hives drones
@@ -103,10 +102,7 @@ func spawn_drones():
 	spawn_position.z = rand_range(-radius, radius)
 	# set position
 	hive_drone.translation = spawn_position
-	# set rotation
-	hive_drone.add_to_group("hive")
-	
-	
+	# add drone to scene	
 	add_child(hive_drone)
 	
 func spawn_stations():
@@ -118,4 +114,5 @@ func spawn_stations():
 	spawn_position.z = rand_range(-radius, radius)
 	# Set Station position 
 	station.translation = spawn_position
+	# Add station to scene
 	add_child(station)

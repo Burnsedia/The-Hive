@@ -20,7 +20,7 @@ var target
 # Called when the node enters the scene tree for the first time.
 func _ready():	
  get_tree().call_group("hive", "set_player", self)
- get_tree().call_group("sectors", "set_player", self)
+ get_tree().call_group("player", "set_player", self)
  Events.connect("shoot", gun, "use")
  Events.connect("fire_missile", luncher, "use")
  Events.connect("fire_missile", luncher2, "use")
@@ -29,7 +29,8 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
 	move_input(delta)
-	
+	get_tree().call_group("hive", "set_player", self)
+	pass	
 func move_input(delta):
 	match ship_state:
 		States.combat:
@@ -75,11 +76,13 @@ func combat_mode(delta):
 		rotate_object_local(Vector3(0,0,1), turn_speed * delta)		
 	if Input.is_action_pressed("roll_left"):
 		rotate_object_local(Vector3(0,0,1), -turn_speed * delta)		
+		
 	#stop moving player
 	if Input.is_action_pressed("shoot"):
 		gun.use(self)
-	if Input.is_action_just_pressed("ui_cancel"):
-		get_tree().change_scene("res://MainManu.tscn")
+		print("shoot plama gun")
+	if Input.is_action_just_pressed("manu"):
+		get_tree().change_scene("res://Sceens/MainManu.tscn")
 	if Input.is_action_just_pressed("fire_missle"):
 		if !target == null:
 			luncher.use(self, target)
@@ -91,7 +94,11 @@ func combat_mode(delta):
 		
 	if Input.is_action_just_pressed("hover_mode"):
 		ship_state = States.hover
-	mov_dir = transform.basis.z * speed * 5  * delta
+	
+	if Input.is_action_pressed("bost"):
+		mov_dir = transform.basis.z * speed * boot_speed_modifer
+	else:		
+		mov_dir = transform.basis.z * speed * delta
 	mov_vec = mov_vec.linear_interpolate(mov_dir, 10 * delta)
 	move_and_slide(mov_vec)
 
@@ -99,12 +106,11 @@ func set_target():
 	target = sensors.get_collider()
 
 func auto_target():
-	if sensors.get_collider():
-		pass 
+	if sensors.get_collider() and sensors.is_in_group("hive"):
+		set_target()
 			
 func damage(damage):
 	hp -= damage
 	print(hp)
 	if hp <= 0:
 		queue_free()
-		

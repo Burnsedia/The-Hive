@@ -13,6 +13,9 @@
 "player",
 ] instance=ExtResource( 2 )]
 script = ExtResource( 1 )
+speed = 2000
+max_speed = 2000
+turn_speed = 5
 
 [node name="MissileLuncher" parent="." index="0" instance=ExtResource( 7 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8, -2.25, 3 )
@@ -29,7 +32,7 @@ space_override = 1
 bulit = ExtResource( 5 )
 
 [node name="plasma" parent="." index="5" instance=ExtResource( 6 )]
-transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, -0.490456, 0, -7 )
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, -0.231328, -0.412762, -6.92461 )
 
 [node name="plasma2" parent="." index="6" instance=ExtResource( 6 )]
 transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 0.497506, 0, -7 )

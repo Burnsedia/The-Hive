@@ -3,7 +3,7 @@
 [ext_resource path="res://Sceens/Hive Mother Ship.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Sceens/player_ship.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Sceens/enemy.tscn" type="PackedScene" id=3]
-[ext_resource path="res://scripts/units/HiveStation.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Sceens/HiveStation.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Sceens/Asteroid.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Sceens/BlueNebla-RedStare.tscn" type="PackedScene" id=6]
 [ext_resource path="res://VirtualAnalog/Analog.tscn" type="PackedScene" id=7]
@@ -18,16 +18,18 @@ drone = ExtResource( 3 )
 MotherShip = ExtResource( 1 )
 Stations = ExtResource( 4 )
 astroids = ExtResource( 5 )
-astroid_count = 5000
+enemy_drone_count = 10
+astroid_count = 500
 
 [node name="player_ship" parent="sectors/Blue-Nebla-RedStare" instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1048 )
-speed = 2048
-turn_speed = 8
+hp = 10000
+boot_speed_modifer = 2
 
-[node name="Camera" type="Camera" parent="sectors/Blue-Nebla-RedStare/player_ship"]
-transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 0, 4.18912, -12.7744 )
-fov = 60.0
+[node name="Camera" type="Camera" parent="sectors/Blue-Nebla-RedStare/player_ship" groups=[
+"player",
+]]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 0, 5, -10.9755 )
+current = true
 far = 8192.0
 
 [node name="UI" type="CanvasLayer" parent="."]
@@ -95,7 +97,6 @@ text = "Map"
 flat = true
 
 [node name="Systems" type="Button" parent="UI/TabContainer"]
-visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 4.0
@@ -105,7 +106,6 @@ margin_bottom = -4.0
 text = "Subsystems"
 
 [node name="Comms" type="Button" parent="UI/TabContainer"]
-visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 4.0
@@ -115,7 +115,6 @@ margin_bottom = -4.0
 text = "Commitations"
 
 [node name="Power" type="Button" parent="UI/TabContainer"]
-visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 4.0
@@ -125,7 +124,6 @@ margin_bottom = -4.0
 text = "PoweerBus"
 
 [node name="Inventory" type="Button" parent="UI/TabContainer"]
-visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 4.0
@@ -135,7 +133,6 @@ margin_bottom = -4.0
 text = "Invitory"
 
 [node name="Sensors" type="Button" parent="UI/TabContainer"]
-visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 4.0
@@ -145,7 +142,6 @@ margin_bottom = -4.0
 text = "Sensors"
 
 [node name="Tech" type="Button" parent="UI/TabContainer"]
-visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 4.0

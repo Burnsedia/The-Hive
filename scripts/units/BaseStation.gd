@@ -1,7 +1,7 @@
 class_name Station
 extends StaticBody
 
-export var hp = 50
+export var hp = 500
 export var wave = 10
 export(PackedScene) var drone
 export(PackedScene) var missiles

@@ -1,0 +1,111 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scripts/UI/MainManu.gd" type="Script" id=1]
+[ext_resource path="res://assets/textures/thumtag.png" type="Texture" id=2]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="menu" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -7.0
+margin_top = -2.0
+margin_right = 44.0
+margin_bottom = 38.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="menu"]
+margin_right = 1075.0
+margin_bottom = 222.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource( 2 )
+expand = true
+
+[node name="Hb" type="HBoxContainer" parent="menu"]
+margin_top = 226.0
+margin_right = 1075.0
+margin_bottom = 414.0
+alignment = 1
+
+[node name="cc" type="CenterContainer" parent="menu/Hb"]
+margin_left = 495.0
+margin_right = 579.0
+margin_bottom = 188.0
+
+[node name="Butons" type="VBoxContainer" parent="menu/Hb/cc"]
+margin_right = 84.0
+margin_bottom = 188.0
+size_flags_horizontal = 11
+size_flags_vertical = 3
+alignment = 1
+
+[node name="NewGame" type="Button" parent="menu/Hb/cc/Butons"]
+margin_right = 84.0
+margin_bottom = 20.0
+size_flags_stretch_ratio = 0.0
+text = "New Game"
+
+[node name="LoadGame" type="Button" parent="menu/Hb/cc/Butons"]
+margin_top = 24.0
+margin_right = 84.0
+margin_bottom = 44.0
+text = "Load Game"
+
+[node name="Options" type="Button" parent="menu/Hb/cc/Butons"]
+margin_top = 48.0
+margin_right = 84.0
+margin_bottom = 68.0
+text = "Options"
+
+[node name="Settings" type="Button" parent="menu/Hb/cc/Butons"]
+margin_top = 72.0
+margin_right = 84.0
+margin_bottom = 92.0
+text = "Settings"
+
+[node name="Mods" type="Button" parent="menu/Hb/cc/Butons"]
+margin_top = 96.0
+margin_right = 84.0
+margin_bottom = 116.0
+text = "Modds"
+
+[node name="Credits" type="Button" parent="menu/Hb/cc/Butons"]
+margin_top = 120.0
+margin_right = 84.0
+margin_bottom = 140.0
+text = "Credits"
+
+[node name="Legal" type="Button" parent="menu/Hb/cc/Butons"]
+margin_top = 144.0
+margin_right = 84.0
+margin_bottom = 164.0
+text = "Legal"
+
+[node name="Exit" type="Button" parent="menu/Hb/cc/Butons"]
+margin_top = 168.0
+margin_right = 84.0
+margin_bottom = 188.0
+size_flags_horizontal = 3
+size_flags_vertical = 2
+text = "Exit"
+
+[node name="Hb2" type="HBoxContainer" parent="menu"]
+margin_top = 418.0
+margin_right = 1075.0
+margin_bottom = 640.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 1
+[connection signal="pressed" from="menu/Hb/cc/Butons/NewGame" to="." method="_on_NewGame_pressed"]
+[connection signal="pressed" from="menu/Hb/cc/Butons/Exit" to="." method="_on_Exit_pressed"]

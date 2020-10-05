@@ -7,6 +7,7 @@ var shot_timer = Timer.new()
 var RoF = 10
 var player_owned = false
 
+
 export(PackedScene) var bulit
 
 # Declare member variables here. Examples:
