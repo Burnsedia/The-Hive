@@ -172,7 +172,7 @@ _global_script_classes=[ {
 "base": "Spatial",
 "class": "Sector",
 "language": "GDScript",
-"path": "res://scripts/Sectors/Base_settor.gd"
+"path": "res://scripts/Sectors/BaseSector.gd"
 }, {
 "base": "Node",
 "class": "State",
@@ -212,7 +212,7 @@ _global_script_classes=[ {
 "base": "RayCast",
 "class": "sensor",
 "language": "GDScript",
-"path": "res://scripts/systems/sensors/base_sensor.gd"
+"path": "res://scripts/systems/sensors/BaseSensor.gd"
 }, {
 "base": "KinematicBody",
 "class": "ship",
@@ -287,6 +287,7 @@ boot_splash/bg_color=Color( 0, 0, 0, 1 )
 Events="*res://scripts/Globals/events.gd"
 UserData="*res://addons/github-integration/scripts/user_data.gd"
 IconLoaderGithub="*res://addons/github-integration/scripts/IconLoaderGithub.gd"
+Globals="*res://scripts/Globals/Globals.gd"
 
 [display]
 

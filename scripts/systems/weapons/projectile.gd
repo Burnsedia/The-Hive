@@ -7,6 +7,7 @@ var user
 const KILL_TIMER = 4
 var timer = 0 
 
+var velocity = Vector3()
 export var speed = 1000
 
 # Called when the node enters the scene tree for the first time.
@@ -18,9 +19,9 @@ func _ready():
 func set_user(u):
 	user = u
 
-func _process(delta):
-	var forward_dir = transform.basis.z.normalized() * speed * delta
-	global_translate(forward_dir)
+func _physics_process(delta):
+	velocity = transform.basis.z.normalized() * speed * delta
+	global_translate(velocity)
 	timer += delta
 	if timer >= KILL_TIMER:
 		queue_free()

@@ -18,7 +18,9 @@ drone = ExtResource( 3 )
 MotherShip = ExtResource( 1 )
 Stations = ExtResource( 4 )
 astroids = ExtResource( 5 )
-enemy_drone_count = 10
+enemy_mothership_count = 1
+enemy_drone_count = 15
+station_count = 1
 astroid_count = 500
 
 [node name="player_ship" parent="sectors/Blue-Nebla-RedStare" instance=ExtResource( 2 )]

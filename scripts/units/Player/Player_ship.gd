@@ -25,12 +25,12 @@ func _ready():
  Events.connect("fire_missile", luncher, "use")
  Events.connect("fire_missile", luncher2, "use")
  add_to_group("player")
+ Globals.player = self
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
 	move_input(delta)
-	get_tree().call_group("hive", "set_player", self)
-	pass	
+
 func move_input(delta):
 	match ship_state:
 		States.combat:
@@ -80,7 +80,6 @@ func combat_mode(delta):
 	#stop moving player
 	if Input.is_action_pressed("shoot"):
 		gun.use(self)
-		print("shoot plama gun")
 	if Input.is_action_just_pressed("manu"):
 		get_tree().change_scene("res://Sceens/MainManu.tscn")
 	if Input.is_action_just_pressed("fire_missle"):

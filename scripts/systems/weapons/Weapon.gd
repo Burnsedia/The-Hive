@@ -21,13 +21,17 @@ func _ready():
 	
 
 func use(user, target:ship = null):
-	shoot(user, target)
+	shoot(user)
 	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func shoot(user, target = null):
 	var projectile = bulit.instance()
 	projectile.set_user(user)
-	add_child(projectile)
-		
+	get_tree().get_root().add_child(projectile)
+	projectile.global_transform = self.global_transform
+	print(str(projectile.name) + "child of " + str(get_parent().name))
+	print(str(Globals.current_scene.name))
+	
+
 
