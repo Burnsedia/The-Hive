@@ -30,9 +30,4 @@ The Game with be releaced on Itch.io and F-droid as well as Google Play Store an
 <a href="https://www.buymeacoffee.com/EGslcZz" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/lato-violet.png" alt="Buy Me A Coffee" style="height: 51px !important;width: 217px !important;" ></a>
 
 
-
-
-<a href="https://www.patreon.com/bePatron?u=4972047" data-patreon-widget-type="become-patron-button">Become a Patron!</a>
-
-
 <iframe frameborder="0" src="https://itch.io/embed/631880?border_width=5&amp;bg_color=222222&amp;fg_color=eeeeee&amp;link_color=2cbcb6&amp;border_color=431212" width="560" height="175"><a href="https://burnsedia.itch.io/the-hive">The Hive Interstellar Despots Simulator by Burnsedia</a></iframe>
