@@ -13,7 +13,8 @@ func shoot(user, target):
 	var projectile = missile.instance()
 	projectile.set_user(user)
 	projectile.set_target(target)
-	add_child(projectile)
+	Globals.current_scene.add_child(projectile)
+	projectile.global_transform = self.global_transform
 
 func damage(damage):
 	hp -= damage

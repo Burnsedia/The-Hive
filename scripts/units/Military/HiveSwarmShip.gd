@@ -63,9 +63,8 @@ func move():
 		vec_to_player.y -= turn_speed
 	if NavDown.is_colliding():
 		vec_to_player.y += turn_speed
+	look_at(vec_to_player, Vector3.UP)
 	
-	rotate_y(deg2rad(vec_to_player.y * turn_speed))
-	rotate_x(deg2rad(vec_to_player.x * turn_speed))
 	return vec_to_player
 	
 func _on_ShootTimer_timeout():

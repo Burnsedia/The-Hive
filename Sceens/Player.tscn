@@ -1,20 +1,18 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=8 format=2]
 
-[ext_resource path="res://scripts/units/Player/Player_ship.gd" type="Script" id=1]
+[ext_resource path="res://scripts/units/Player/Player.gd" type="Script" id=1]
 [ext_resource path="res://Sceens/ShipBase.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Sceens/Weapon.tscn" type="PackedScene" id=3]
 [ext_resource path="res://assets/Models/TEST2.glb" type="PackedScene" id=4]
-[ext_resource path="res://Sceens/Area.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Sceens/trusters.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Sceens/MissileLuncher.tscn" type="PackedScene" id=7]
 [ext_resource path="res://scripts/systems/sensors/BaseSensor.gd" type="Script" id=8]
 
-
-[node name="player_ship" groups=[
+[node name="Player" groups=[
 "player",
 ] instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 script = ExtResource( 1 )
-speed = 2000
 max_speed = 2000
 turn_speed = 5
 
@@ -30,7 +28,6 @@ transform = Transform( -1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, 0, 0, 0
 [node name="Weapon" parent="." index="4" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 9.08888 )
 space_override = 1
-bulit = ExtResource( 5 )
 
 [node name="plasma" parent="." index="5" instance=ExtResource( 6 )]
 transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, -0.231328, -0.412762, -6.92461 )

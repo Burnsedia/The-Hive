@@ -11,6 +11,7 @@ var manager = get_parent()
 var cur_weapon = null
 var cur_slot = 0
 enum weapon_slots { pusle, missile, beam}
+
 var weapon_unlocked = {
 	weapon_slots.pusle: true,
 	weapon_slots.missile: true,

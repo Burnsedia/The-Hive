@@ -85,6 +85,7 @@ func combat_mode(delta):
 	if Input.is_action_just_pressed("fire_missle"):
 		if !target == null:
 			luncher.use(self, target)
+			luncher2.use(self, target)
 			print("fired missile at " + str(target))
 			
 	if Input.is_action_just_pressed("lookon"):
@@ -98,7 +99,7 @@ func combat_mode(delta):
 		mov_dir = transform.basis.z * speed * boot_speed_modifer
 	else:		
 		mov_dir = transform.basis.z * speed * delta
-	mov_vec = mov_vec.linear_interpolate(mov_dir, 10 * delta)
+	mov_vec = mov_vec.linear_interpolate(mov_dir, turn_speed * delta)
 	move_and_slide(mov_vec)
 
 func set_target():

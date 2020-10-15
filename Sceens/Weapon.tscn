@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://scripts/systems/weapons/Weapon.gd" type="Script" id=1]
+[ext_resource path="res://Sceens/Bullet.tscn" type="PackedScene" id=2]
 
 [sub_resource type="CapsuleShape" id=1]
 radius = 0.551448
@@ -24,6 +25,7 @@ material = SubResource( 4 )
 
 [node name="Weapon" type="Area"]
 script = ExtResource( 1 )
+bullet = ExtResource( 2 )
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.02269 )
