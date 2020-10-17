@@ -1,4 +1,5 @@
 extends Node
+
 # Combat Events
 signal Shoot(Bulit, Direction, Position)
 signal StationDistroyed(StationDistroyed, StationType)
