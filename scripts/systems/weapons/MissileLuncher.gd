@@ -16,6 +16,7 @@ func shoot(user, target):
 	Globals.current_scene.add_child(projectile)
 	projectile.global_transform = self.global_transform
 
+
 func damage(damage):
 	hp -= damage
 	if hp <= 0:

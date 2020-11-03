@@ -19,47 +19,47 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://lbry/godot-steering-ai-framework/GSAIAgentLocation.gd"
 }, {
-"base": "Reference",
+"base": "GSAISteeringBehavior",
 "class": "GSAIArrive",
 "language": "GDScript",
 "path": "res://lbry/godot-steering-ai-framework/Behaviors/GSAIArrive.gd"
 }, {
-"base": "Reference",
+"base": "GSAIGroupBehavior",
 "class": "GSAIAvoidCollisions",
 "language": "GDScript",
 "path": "res://lbry/godot-steering-ai-framework/Behaviors/GSAIAvoidCollisions.gd"
 }, {
-"base": "Reference",
+"base": "GSAISteeringBehavior",
 "class": "GSAIBlend",
 "language": "GDScript",
 "path": "res://lbry/godot-steering-ai-framework/Behaviors/GSAIBlend.gd"
 }, {
-"base": "Reference",
+"base": "GSAIGroupBehavior",
 "class": "GSAICohesion",
 "language": "GDScript",
 "path": "res://lbry/godot-steering-ai-framework/Behaviors/GSAICohesion.gd"
 }, {
-"base": "Reference",
+"base": "GSAIPursue",
 "class": "GSAIEvade",
 "language": "GDScript",
 "path": "res://lbry/godot-steering-ai-framework/Behaviors/GSAIEvade.gd"
 }, {
-"base": "Reference",
+"base": "GSAIMatchOrientation",
 "class": "GSAIFace",
 "language": "GDScript",
 "path": "res://lbry/godot-steering-ai-framework/Behaviors/GSAIFace.gd"
 }, {
-"base": "Reference",
+"base": "GSAISeek",
 "class": "GSAIFlee",
 "language": "GDScript",
 "path": "res://lbry/godot-steering-ai-framework/Behaviors/GSAIFlee.gd"
 }, {
-"base": "Reference",
+"base": "GSAIArrive",
 "class": "GSAIFollowPath",
 "language": "GDScript",
 "path": "res://lbry/godot-steering-ai-framework/Behaviors/GSAIFollowPath.gd"
 }, {
-"base": "Reference",
+"base": "GSAISteeringBehavior",
 "class": "GSAIGroupBehavior",
 "language": "GDScript",
 "path": "res://lbry/godot-steering-ai-framework/GSAIGroupBehavior.gd"
@@ -79,12 +79,12 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://lbry/godot-steering-ai-framework/Agents/GSAIKinematicBody3DAgent.gd"
 }, {
-"base": "Reference",
+"base": "GSAIMatchOrientation",
 "class": "GSAILookWhereYouGo",
 "language": "GDScript",
 "path": "res://lbry/godot-steering-ai-framework/Behaviors/GSAILookWhereYouGo.gd"
 }, {
-"base": "Reference",
+"base": "GSAISteeringBehavior",
 "class": "GSAIMatchOrientation",
 "language": "GDScript",
 "path": "res://lbry/godot-steering-ai-framework/Behaviors/GSAIMatchOrientation.gd"
@@ -94,7 +94,7 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://lbry/godot-steering-ai-framework/GSAIPath.gd"
 }, {
-"base": "Reference",
+"base": "GSAISteeringBehavior",
 "class": "GSAIPriority",
 "language": "GDScript",
 "path": "res://lbry/godot-steering-ai-framework/Behaviors/GSAIPriority.gd"
@@ -104,7 +104,7 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://lbry/godot-steering-ai-framework/Proximities/GSAIProximity.gd"
 }, {
-"base": "Reference",
+"base": "GSAISteeringBehavior",
 "class": "GSAIPursue",
 "language": "GDScript",
 "path": "res://lbry/godot-steering-ai-framework/Behaviors/GSAIPursue.gd"
@@ -124,12 +124,12 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://lbry/godot-steering-ai-framework/Agents/GSAIRigidBody3DAgent.gd"
 }, {
-"base": "Reference",
+"base": "GSAISteeringBehavior",
 "class": "GSAISeek",
 "language": "GDScript",
 "path": "res://lbry/godot-steering-ai-framework/Behaviors/GSAISeek.gd"
 }, {
-"base": "Reference",
+"base": "GSAIGroupBehavior",
 "class": "GSAISeparation",
 "language": "GDScript",
 "path": "res://lbry/godot-steering-ai-framework/Behaviors/GSAISeparation.gd"
@@ -288,11 +288,6 @@ Events="*res://scripts/Globals/events.gd"
 UserData="*res://addons/github-integration/scripts/user_data.gd"
 IconLoaderGithub="*res://addons/github-integration/scripts/IconLoaderGithub.gd"
 Globals="*res://scripts/Globals/Globals.gd"
-
-[display]
-
-window/size/borderless=true
-window/size/fullscreen=true
 
 [editor_plugins]
 
