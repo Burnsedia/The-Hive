@@ -1,0 +1,85 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://scripts/UI/SettingsMenu.gd" type="Script" id=1]
+
+[node name="Control" type="VBoxContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -1.05948
+margin_bottom = -1.05945
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_right = 1024.0
+margin_bottom = 31.0
+size_flags_horizontal = 3
+size_flags_vertical = 6
+size_flags_stretch_ratio = 0.0
+text = "Settings
+"
+align = 1
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+margin_top = 35.0
+margin_right = 1024.0
+margin_bottom = 600.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+margin_left = 459.0
+margin_top = 224.0
+margin_right = 565.0
+margin_bottom = 340.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Input Options" type="Button" parent="CenterContainer/VBoxContainer"]
+margin_right = 106.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Input"
+
+[node name="Game Options" type="Button" parent="CenterContainer/VBoxContainer"]
+margin_top = 24.0
+margin_right = 106.0
+margin_bottom = 44.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Game Options"
+
+[node name="Sound Options" type="Button" parent="CenterContainer/VBoxContainer"]
+margin_top = 48.0
+margin_right = 106.0
+margin_bottom = 68.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Sound Options"
+
+[node name="Graphics" type="Button" parent="CenterContainer/VBoxContainer"]
+margin_top = 72.0
+margin_right = 106.0
+margin_bottom = 92.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Graphics"
+
+[node name="Back to Main Menu" type="Button" parent="CenterContainer/VBoxContainer"]
+margin_top = 96.0
+margin_right = 106.0
+margin_bottom = 116.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Graphics"
+[connection signal="pressed" from="CenterContainer/VBoxContainer/Back to Main Menu" to="." method="_on_Back_to_Main_Menu_pressed"]
