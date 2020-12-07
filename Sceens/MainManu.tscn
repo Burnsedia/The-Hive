@@ -63,11 +63,11 @@ margin_right = 84.0
 margin_bottom = 50.0
 text = "Load Game"
 
-[node name="Options" type="Button" parent="menu/Hb/cc/Butons"]
+[node name="HostGame" type="Button" parent="menu/Hb/cc/Butons"]
 margin_top = 60.0
 margin_right = 84.0
 margin_bottom = 80.0
-text = "Options"
+text = "HostGame"
 
 [node name="Settings" type="Button" parent="menu/Hb/cc/Butons"]
 margin_top = 90.0
@@ -79,7 +79,7 @@ text = "Settings"
 margin_top = 120.0
 margin_right = 84.0
 margin_bottom = 140.0
-text = "Modds"
+text = "Mods"
 
 [node name="Credits" type="Button" parent="menu/Hb/cc/Butons"]
 margin_top = 150.0
@@ -87,11 +87,11 @@ margin_right = 84.0
 margin_bottom = 170.0
 text = "Credits"
 
-[node name="Legal" type="Button" parent="menu/Hb/cc/Butons"]
+[node name="Cheritor" type="Button" parent="menu/Hb/cc/Butons"]
 margin_top = 180.0
 margin_right = 84.0
 margin_bottom = 200.0
-text = "Legal"
+text = "Charitor"
 
 [node name="Exit" type="Button" parent="menu/Hb/cc/Butons"]
 margin_top = 210.0
@@ -109,4 +109,5 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 alignment = 1
 [connection signal="pressed" from="menu/Hb/cc/Butons/NewGame" to="." method="_on_NewGame_pressed"]
+[connection signal="pressed" from="menu/Hb/cc/Butons/Settings" to="." method="_on_Settings_pressed"]
 [connection signal="pressed" from="menu/Hb/cc/Butons/Exit" to="." method="_on_Exit_pressed"]

@@ -1,7 +1,10 @@
 extends Spatial
 
 export var BodyToMove := KinimaticBody
-
+export var = 500
+export var MaxSpeed = 1000.0
+export var TurnSpeed = 2.0
+export var BootSpeedModifer = 20.0
 
 
 

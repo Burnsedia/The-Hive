@@ -15,3 +15,6 @@ func _on_NewGame_pressed():
 
 func _on_Exit_pressed():
 	get_tree().quit()
+
+func _on_Settings_pressed():
+	get_tree().change_scene("res://Sceens/SettingsMenu.tscn")
