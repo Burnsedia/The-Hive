@@ -2,13 +2,11 @@
 
 [ext_resource path="res://Units/units/BaseStation.gd" type="Script" id=1]
 [ext_resource path="res://assets/Models/Material_001.material" type="Material" id=2]
-[ext_resource path="res://Sceens/HiveSwarmShip.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Units/HiveSwarmShip.tscn" type="PackedScene" id=3]
 [ext_resource path="res://assets/Models/Material.material" type="Material" id=4]
 [ext_resource path="res://assets/Models/Material_002.material" type="Material" id=5]
 [ext_resource path="res://assets/Models/read hull.material" type="Material" id=6]
-[ext_resource path="res://Sceens/Missile.tscn" type="PackedScene" id=7]
-
-
+[ext_resource path="res://SubSystems/Missile.tscn" type="PackedScene" id=7]
 
 [sub_resource type="ArrayMesh" id=1]
 resource_name = "Cube"

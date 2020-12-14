@@ -1,13 +1,10 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://Sceens/ShipBase.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Units/ShipBase.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Sceens/Weapon.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Units/units/Military/HiveSwarmShip.gd" type="Script" id=3]
 [ext_resource path="res://Sceens/drone_mk1.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Sceens/trusters.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Sceens/Bullet.tscn" type="PackedScene" id=6]
-
-
+[ext_resource path="res://SubSystems/trusters.tscn" type="PackedScene" id=5]
 
 [node name="enemy" groups=[
 "hive",
@@ -51,7 +48,6 @@ autostart = true
 
 [node name="Weapon" parent="." index="8" instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 9.59647 )
-bulit = ExtResource( 6 )
 
 [node name="drone_mk1" parent="." index="9" instance=ExtResource( 4 )]
 transform = Transform( -1.62921e-06, 0, 10, 0, 10, 0, -10, 0, -1.62921e-06, 0.0678025, -0.0290079, -0.215716 )

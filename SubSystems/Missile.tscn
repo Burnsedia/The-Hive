@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://Sceens/trusters.tscn" type="PackedScene" id=1]
-[ext_resource path="res://scripts/systems/weapons/Missile.gd" type="Script" id=2]
+[ext_resource path="res://SubSystems/trusters.tscn" type="PackedScene" id=1]
+[ext_resource path="res://SubSystems/systems/weapons/Missile.gd" type="Script" id=2]
 
 [sub_resource type="SpatialMaterial" id=1]
 albedo_color = Color( 0.811765, 0.647059, 0, 1 )
