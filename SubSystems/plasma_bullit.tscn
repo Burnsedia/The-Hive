@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://assets/textures/particle.png" type="Texture" id=1]
+
+[sub_resource type="SpatialMaterial" id=1]
+flags_transparent = true
+flags_unshaded = true
+vertex_color_use_as_albedo = true
+params_blend_mode = 1
+params_cull_mode = 2
+params_billboard_mode = 3
+particles_anim_h_frames = 1
+particles_anim_v_frames = 1
+particles_anim_loop = false
+albedo_color = Color( 0.0745098, 0.74902, 0.74902, 1 )
+albedo_texture = ExtResource( 1 )
+
+[sub_resource type="ParticlesMaterial" id=2]
+spread = 6.0
+gravity = Vector3( 0, 0, 0 )
+initial_velocity = 50.0
+angular_velocity = 37.4
+angular_velocity_random = 0.3
+
+[sub_resource type="QuadMesh" id=3]
+
+[node name="Thurter" type="Spatial"]
+
+[node name="Particles" type="Particles" parent="."]
+material_override = SubResource( 1 )
+cast_shadow = 0
+amount = 128
+lifetime = 0.3
+process_material = SubResource( 2 )
+draw_pass_1 = SubResource( 3 )
