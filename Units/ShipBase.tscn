@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Units/units/ShipBase.gd" type="Script" id=2]
+
+
+[sub_resource type="CapsuleShape" id=1]
+radius = 8.47871
+height = 6.18979
+
+[node name="ShipBase" type="KinematicBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.97553 )
+script = ExtResource( 2 )
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+shape = SubResource( 1 )
