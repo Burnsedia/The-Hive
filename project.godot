@@ -162,17 +162,17 @@ _global_script_classes=[ {
 "base": "ship",
 "class": "HiveSwarmEnemy",
 "language": "GDScript",
-"path": "res://scripts/units/Military/HiveSwarmShip.gd"
+"path": "res://Units/units/Military/HiveSwarmShip.gd"
 }, {
 "base": "Area",
 "class": "MissileLuncher",
 "language": "GDScript",
-"path": "res://scripts/systems/weapons/MissileLuncher.gd"
+"path": "res://SubSystems/systems/weapons/MissileLuncher.gd"
 }, {
 "base": "ship",
 "class": "Player",
 "language": "GDScript",
-"path": "res://scripts/units/Player/Player.gd"
+"path": "res://Player/Player.gd"
 }, {
 "base": "Spatial",
 "class": "Sector",
@@ -189,45 +189,45 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://lbry/state/statematchine.gd"
 }, {
-"base": "StaticBody",
+"base": "Reference",
 "class": "Station",
 "language": "GDScript",
-"path": "res://scripts/units/BaseStation.gd"
+"path": "res://Units/units/BaseStation.gd"
 }, {
 "base": "Spatial",
 "class": "TerentBase",
 "language": "GDScript",
-"path": "res://scripts/units/TerentBase.gd"
+"path": "res://Units/units/TerentBase.gd"
 }, {
 "base": "Area",
 "class": "Weapon",
 "language": "GDScript",
-"path": "res://scripts/systems/weapons/Weapon.gd"
+"path": "res://SubSystems/systems/weapons/Weapon.gd"
 }, {
 "base": "Area",
 "class": "bullit",
 "language": "GDScript",
-"path": "res://scripts/systems/weapons/projectile.gd"
+"path": "res://SubSystems/systems/weapons/projectile.gd"
 }, {
 "base": "Area",
 "class": "missile",
 "language": "GDScript",
-"path": "res://scripts/systems/weapons/Missile.gd"
+"path": "res://SubSystems/systems/weapons/Missile.gd"
 }, {
 "base": "Node",
 "class": "powercompownit",
 "language": "GDScript",
-"path": "res://scripts/systems/power/powercompounit.gd"
+"path": "res://SubSystems/systems/power/powercompounit.gd"
 }, {
 "base": "RayCast",
 "class": "sensor",
 "language": "GDScript",
-"path": "res://scripts/systems/sensors/BaseSensor.gd"
+"path": "res://SubSystems/systems/sensors/BaseSensor.gd"
 }, {
 "base": "KinematicBody",
 "class": "ship",
 "language": "GDScript",
-"path": "res://scripts/units/ShipBase.gd"
+"path": "res://Units/units/ShipBase.gd"
 } ]
 _global_script_class_icons={
 "Astroid": "",
@@ -279,7 +279,7 @@ _global_script_class_icons={
 [application]
 
 config/name="The-Hive"
-run/main_scene="res://Sceens/MainManu.tscn"
+run/main_scene="res://UI/MainManu.tscn"
 boot_splash/bg_color=Color( 0, 0, 0, 1 )
 
 [autoload]
