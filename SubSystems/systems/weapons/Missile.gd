@@ -23,7 +23,7 @@ func _ready():
 
 func _physics_process(delta):
 	acc += seek() 
-	val += acc
+	val += acc + user.val 
 	global_translate(val * delta)
 	
 func set_user(u):

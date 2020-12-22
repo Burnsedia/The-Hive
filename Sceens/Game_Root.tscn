@@ -18,11 +18,11 @@ drone = ExtResource( 3 )
 MotherShip = ExtResource( 2 )
 Stations = ExtResource( 4 )
 astroids = ExtResource( 5 )
+enemy_drone_count = 20
 random_rotation = true
 
 [node name="Player" parent="sectors/Blue-Nebla-RedStare" instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 0.999531, -0.0306083, 0, 0.0306083, 0.999531, 0, 0, 0 )
-max_speed = 1000
 
 [node name="UI" type="CanvasLayer" parent="."]
 

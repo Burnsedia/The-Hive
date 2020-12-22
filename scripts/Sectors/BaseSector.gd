@@ -42,10 +42,9 @@ func _ready():
 		spawn_stations()
 	for i in astroid_count:
 		spawn_astroids()	
-#	for i in enemy_drone_count:
-#		spawn_drones()
-#	for i in enemy_mothership_count:
-#		spawn_Hives()
+	for i in enemy_drone_count:
+		spawn_drones()
+
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

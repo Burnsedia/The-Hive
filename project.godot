@@ -179,6 +179,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://scripts/Sectors/BaseSector.gd"
 }, {
+"base": "RayCast",
+"class": "Sensor",
+"language": "GDScript",
+"path": "res://SubSystems/systems/sensors/BaseSensor.gd"
+}, {
 "base": "Node",
 "class": "State",
 "language": "GDScript",
@@ -189,7 +194,7 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://lbry/state/statematchine.gd"
 }, {
-"base": "Reference",
+"base": "StaticBody",
 "class": "Station",
 "language": "GDScript",
 "path": "res://Units/units/BaseStation.gd"
@@ -218,11 +223,6 @@ _global_script_classes=[ {
 "class": "powercompownit",
 "language": "GDScript",
 "path": "res://SubSystems/systems/power/powercompounit.gd"
-}, {
-"base": "RayCast",
-"class": "sensor",
-"language": "GDScript",
-"path": "res://SubSystems/systems/sensors/BaseSensor.gd"
 }, {
 "base": "KinematicBody",
 "class": "ship",
@@ -264,6 +264,7 @@ _global_script_class_icons={
 "MissileLuncher": "",
 "Player": "",
 "Sector": "",
+"Sensor": "",
 "State": "",
 "StateMachine": "",
 "Station": "",
@@ -272,7 +273,6 @@ _global_script_class_icons={
 "bullit": "",
 "missile": "",
 "powercompownit": "",
-"sensor": "",
 "ship": ""
 }
 

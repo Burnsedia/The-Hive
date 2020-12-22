@@ -1,5 +1,5 @@
 extends RayCast
-class_name sensor
+class_name Sensor
 
 
 

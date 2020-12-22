@@ -16,8 +16,8 @@ onready var NavDown = $NavDown
 var can_shoot = false
 var player = null
 var dead = false
-var val = Vector3()
 var acc =  Vector3()
+var turn_speed = 10
 
 
 
