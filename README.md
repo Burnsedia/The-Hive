@@ -1,17 +1,12 @@
-# The-Hive is a VR-Space Sim/FPS game.
-The Game with be releaced on Itch.io and F-droid as well as Google Play Store and Microsoft Store
+# InterSellar Despot Simulator
+`Will coming soon to itch.io, Steam, GOTM.io, Android`
 
+## Introduction
+Intersellar Despot Simulator is a Hybrid RTS Space Roughlike Game. Start as a humble mercany, working for your local system's warloard,
+overthough him and tack his place, fact for contole of other systems until you contole the hole sector, Keep fighing untill the Hole Galaxy is yours and you are 
+now the Roler of the Known Galaxy, but there have been reports of unkown ship intering known space, distroy them and take there advance tachnolgy, IF YOU CAN. 
 
-* Introduction
-
- * Requirements
- * Recommended modules
- * Installation
- * Configuration
- * Troubleshooting
- * FAQ
- * Maintainers
-<p>
+ <p>
 <a href="https://twitter.com/"><img src="https://img.shields.io/badge/twitter-%231DA1F2.svg?&style=for-the-badge&logo=twitter&logoColor=white" height=25></a> 
 <a href="https://www.youtube.com/channel/UC71vuzjHKhS4Wv4Px44FKjg?view_as=subscriber"><img src="https://img.shields.io/badge/-YouTube-red?&style=for-the-badge&logo=youtube&logoColor=white" height=25></a>
 </p>
