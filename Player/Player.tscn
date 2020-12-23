@@ -2,10 +2,10 @@
 
 [ext_resource path="res://Player/Player.gd" type="Script" id=1]
 [ext_resource path="res://Units/units/ShipBase.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Sceens/Weapon.tscn" type="PackedScene" id=3]
+[ext_resource path="res://SubSystems/MovementSytem.tscn" type="PackedScene" id=3]
 [ext_resource path="res://assets/Models/TEST2.glb" type="PackedScene" id=4]
-[ext_resource path="res://SubSystems/trusters.tscn" type="PackedScene" id=6]
-[ext_resource path="res://SubSystems/MissileLuncher.tscn" type="PackedScene" id=7]
+[ext_resource path="res://SubSystems/systems/weapons/WeaponManager.tscn" type="PackedScene" id=5]
+[ext_resource path="res://SubSystems/HealthManager.tscn" type="PackedScene" id=6]
 [ext_resource path="res://SubSystems/systems/sensors/BaseSensor.gd" type="Script" id=8]
 
 [node name="Player" groups=[
@@ -27,19 +27,9 @@ script = ExtResource( 8 )
 transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 0, 5, -17 )
 far = 8192.0
 
-[node name="plasma" parent="MovementSytem" index="0" instance=ExtResource( 6 )]
-transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 0.65, 0, -7 )
+[node name="MovementSytem" parent="." index="4" instance=ExtResource( 3 )]
+ignore_rotation = true
 
-[node name="plasma2" parent="MovementSytem" index="1" instance=ExtResource( 6 )]
-transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, -0.65, 0, -7 )
+[node name="WeaponManager" parent="." index="5" instance=ExtResource( 5 )]
 
-[node name="MissileLuncher2" parent="WeaponManager" index="0" instance=ExtResource( 7 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8, -2.25, 3 )
-
-[node name="Weapon" parent="WeaponManager" index="1" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 9.08888 )
-space_override = 1
-
-[node name="MissileLuncher" parent="WeaponManager" index="2" instance=ExtResource( 7 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8, -2.25, 3 )
-[connection signal="movement_info" from="MovementSytem" to="." method="_on_MovementSytem_movement_info"]
+[node name="HealthManager" parent="." index="6" instance=ExtResource( 6 )]

@@ -29,16 +29,13 @@ var hotkeys = {
 
 # Called when the node enters the scene tree for the first time.
 func _ready():	
-	Movement.init(self)
-#	Health.init(self)
-#	Weapons.init(self)
+	get_tree().call_group("hive","set_player", self)
 	
 	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _physics_process(delta):
-#	move_input(delta)
-	pass 
+#func _physics_process(delta):
+#	pass 
 
 func set_target():
 	target = sensors.get_collider()
@@ -48,6 +45,7 @@ func auto_target():
 		set_target()
 
 func _process(_delta):
+	get_tree().call_group("hive","set_player", self)
 	if Input.is_action_just_pressed("exit"):
 		get_tree().quit()
 	if Input.is_action_just_pressed("restart"):
@@ -57,35 +55,45 @@ func _process(_delta):
 		return
 	
 	var move_vec = Vector3()
-	if Input.is_action_pressed("move_forwards"):
-		move_vec += Vector3.FORWARD
-	if Input.is_action_pressed("move_backwards"):
-		move_vec += Vector3.BACK
-	if Input.is_action_pressed("move_left"):
-		move_vec += Vector3.LEFT
-	if Input.is_action_pressed("move_right"):
-		move_vec += Vector3.RIGHT
+	if Input.is_action_pressed("MoveForward"):
+		move_vec += transform.basis.z
+	if Input.is_action_pressed("MoveBackward"):
+		move_vec += -transform.basis.z
+	if Input.is_action_pressed("MoveLeft"):
+		move_vec += transform.basis.x
+	if Input.is_action_pressed("MoveRight"):
+		move_vec += -transform.basis.x
+	if Input.is_action_pressed("roll_left"):
+		rotate_object_local(Vector3.FORWARD, .05)
+	if Input.is_action_pressed("roll_right"):
+		rotate_object_local(Vector3.FORWARD,-.05)
+	if Input.is_action_pressed("rotate_left"):
+		rotate_object_local(Vector3.UP, .05)
+	if Input.is_action_pressed("rotate_right"):
+		rotate_object_local(Vector3.UP, -.05)
+	if Input.is_action_pressed("rotate_down"):
+		rotate_object_local(Vector3.RIGHT, .05)
+	if Input.is_action_pressed("rotate_up"):
+		rotate_object_local(Vector3.RIGHT, -.05)
 	
 	Movement.set_move_vec(move_vec)
-	if Input.is_action_just_pressed("jump"):
-		Movement.jump()
-	
-	Weapons.attack(Input.is_action_just_pressed("attack"), 
-		Input.is_action_pressed("attack"))
 
-func _input(event):
-	if event is InputEventMouseMotion:
-		rotation_degrees.y -= mouse_sens * event.relative.x
-		camera.rotation_degrees.x -= mouse_sens * event.relative.y
-		camera.rotation_degrees.x = clamp(camera.rotation_degrees.x, -90, 90)
-	if event is InputEventKey and event.pressed:
-		if event.scancode in hotkeys:
-			Weapons.switch_to_weapon_slot(hotkeys[event.scancode])
-	if event is InputEventMouseButton and event.pressed:
-		if event.button_index == BUTTON_WHEEL_DOWN:
-			Weapons.switch_to_next_weapon()
-		if event.button_index == BUTTON_WHEEL_UP:
-			Weapons.switch_to_last_weapon()
+# Handle mouse and controler plus touch input
+##func _input(event):
+##	if event is InputEventMouseMotion or InputEventJoypadMotion:
+##		rotation_degrees.y -= mouse_sens * event.relative.x
+##		rotation_degrees.x += mouse_sens * event.relative.y
+#
+#
+#
+##	if event is InputEventKey and event.pressed:
+##		if event.scancode in hotkeys:
+##			Weapons.switch_to_weapon_slot(hotkeys[event.scancode])
+##	if event is InputEventMouseButton and event.pressed:
+##		if event.button_index == BUTTON_WHEEL_DOWN:
+##			Weapons.switch_to_next_weapon()
+##		if event.button_index == BUTTON_WHEEL_UP:
+##			Weapons.switch_to_last_weapon()
 
 func hurt(damage, dir):
 	Health.hurt(damage, dir)
