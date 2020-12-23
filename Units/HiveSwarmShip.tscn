@@ -1,16 +1,15 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Units/units/ShipBase.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Sceens/Weapon.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Units/units/Military/HiveSwarmShip.gd" type="Script" id=3]
 [ext_resource path="res://Sceens/drone_mk1.tscn" type="PackedScene" id=4]
 [ext_resource path="res://SubSystems/trusters.tscn" type="PackedScene" id=5]
-
+[ext_resource path="res://SubSystems/MovementSytem.tscn" type="PackedScene" id=6]
 
 [node name="enemy" groups=[
 "hive",
 ] instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 script = ExtResource( 3 )
 
 [node name="CollisionShape" parent="." index="0"]
@@ -55,4 +54,6 @@ transform = Transform( -1.62921e-06, 0, 10, 0, 10, 0, -10, 0, -1.62921e-06, 0.06
 
 [node name="Spatial" parent="." index="10" instance=ExtResource( 5 )]
 transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 7.91645e-07, 0, -2.92955 )
+
+[node name="MovementSytem" parent="." index="11" instance=ExtResource( 6 )]
 [connection signal="timeout" from="ShootTimer" to="." method="_on_ShootTimer_timeout"]

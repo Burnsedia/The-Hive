@@ -13,7 +13,6 @@
 [node name="sectors" type="Node" parent="."]
 
 [node name="Blue-Nebla-RedStare" parent="sectors" instance=ExtResource( 6 )]
-radius = 1000
 drone = ExtResource( 3 )
 MotherShip = ExtResource( 2 )
 Stations = ExtResource( 4 )
@@ -23,6 +22,12 @@ random_rotation = true
 
 [node name="Player" parent="sectors/Blue-Nebla-RedStare" instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 0.999531, -0.0306083, 0, 0.0306083, 0.999531, 0, 0, 0 )
+
+[node name="enemy" parent="sectors/Blue-Nebla-RedStare" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 127.355 )
+
+[node name="enemy2" parent="sectors/Blue-Nebla-RedStare" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 70.9578, 0, 127.355 )
 
 [node name="UI" type="CanvasLayer" parent="."]
 

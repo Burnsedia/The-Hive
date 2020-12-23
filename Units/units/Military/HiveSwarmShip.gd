@@ -25,15 +25,10 @@ func _ready():
 	timer.start()
 	add_to_group("hive")
  
-func _physics_process(delta):
-	if dead:
-		return
-	if player == null:
-		return
-	acc += move()
-	val +=  acc
-	move_and_collide(val)
-	attack()
+func _process(delta):
+	set_player_vec()
+	Movement.set_move_vec(mov_vec)
+	
 	
 func attack():
 	if tgarget.get_collider() == player:
@@ -50,27 +45,32 @@ func set_player(p):
 	player = p
 	print("player set")
 
-func move():
-	var vec_to_player = player.translation - translation
-	var faceplayer = player.rotation - self.rotation
-	vec_to_player = vec_to_player.normalized()
-	raycast.cast_to = vec_to_player * 1.5
-	if NavLeft.is_colliding():
-		vec_to_player.x -= turn_speed
+func set_player_vec():
+	if player == null:
+		print("Player not Set, can kill you today")
+		can_shoot = false
+		return
+	var player_vec = transform.origin - player.transform.origin
+	mov_vec =  -player_vec
+	
+	return mov_vec
+
+# check if NPC needs to avoid closion
+func avoid_collion():
+	mov_vec = transform.basis.z * 50
 	if NavRight.is_colliding():
-		vec_to_player.x += turn_speed
+		rotate(Vector3.UP, .05)
+	elif NavLeft.is_colliding():
+		rotate(Vector3.UP, .05)
+		
 	if NavUp.is_colliding():
-		vec_to_player.y -= turn_speed
-	if NavDown.is_colliding():
-		vec_to_player.y += turn_speed
-	
-	rotation = faceplayer
-	
-	return vec_to_player
+		rotate(Vector3.RIGHT, .05)
+	elif NavDown.is_colliding():
+		rotate(Vector3.RIGHT, -.05)
 	
 func _on_ShootTimer_timeout():
 	can_shoot = true
-	timer.start()
+	attack()
 
 func damage(damage):
 	print("hit by")

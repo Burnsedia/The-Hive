@@ -17,4 +17,4 @@ func _ready():
 
 
 func _on_Back_to_Main_Menu_pressed():
-	get_tree().change_scene("res://Sceens/MainManu.tscn")
+	get_tree().change_scene("res://UI/MainManu.tscn")
