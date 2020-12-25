@@ -104,6 +104,8 @@ func heal(amount):
 func kill():
 	dead = true
 	Movement.freeze()
-
+	
+func _I_am_the_player():
+	get_tree().call_group("hive","set_player", self)
 
 # Replace with function body.
