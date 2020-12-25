@@ -24,6 +24,7 @@ var turn_speed = 10
 func _ready():
 	timer.start()
 	add_to_group("hive")
+	get_tree().call_group("player", "_I_am_the_player")
  
 func _process(delta):
 	set_player_vec()
@@ -55,18 +56,23 @@ func set_player_vec():
 	
 	return mov_vec
 
+#func aim():
+#	var disired_rotation = transform.looking_at(player.transform.origin, Vector3.UP)
+#	var a = Quat(transform.basis.get_rotation_quat().slerp(disired_rotation.get_rotation_quat())
+
+
 # check if NPC needs to avoid closion
-func avoid_collion():
-	mov_vec = transform.basis.z * 50
-	if NavRight.is_colliding():
-		rotate(Vector3.UP, .05)
-	elif NavLeft.is_colliding():
-		rotate(Vector3.UP, .05)
-		
-	if NavUp.is_colliding():
-		rotate(Vector3.RIGHT, .05)
-	elif NavDown.is_colliding():
-		rotate(Vector3.RIGHT, -.05)
+#func avoid_collion():
+#	mov_vec = transform.basis.z * 50
+#	if NavRight.is_colliding():
+#		rotate(Vector3.UP, .05)
+#	elif NavLeft.is_colliding():
+#		rotate(Vector3.UP, .05)
+#
+#	if NavUp.is_colliding():
+#		rotate(Vector3.RIGHT, .05)
+#	elif NavDown.is_colliding():
+#		rotate(Vector3.RIGHT, -.05)
 	
 func _on_ShootTimer_timeout():
 	can_shoot = true
