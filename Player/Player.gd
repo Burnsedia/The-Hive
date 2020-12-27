@@ -45,6 +45,7 @@ func auto_target():
 		set_target()
 
 func _process(_delta):
+	val = mov_vec
 	get_tree().call_group("hive","set_player", self)
 	if Input.is_action_just_pressed("exit"):
 		get_tree().quit()
@@ -109,3 +110,7 @@ func _I_am_the_player():
 	get_tree().call_group("hive","set_player", self)
 
 # Replace with function body.
+
+
+func _on_Portal_area_entered(area):
+	print("entered portal")
