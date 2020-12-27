@@ -22,6 +22,8 @@ export(PackedScene) var Stations
 export(PackedScene) var astroids
 export(PackedScene) var artifacts
 
+var _player = preload("res://Player/Player.tscn")
+
 # Enemy unit and station counts
 export var enemy_mothership_count = 5
 export var enemy_drone_count = 50 
@@ -37,14 +39,14 @@ var artifacts_count = rand_range(2.0, 16.0)
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	Globals.current_scene = self
-	for i in station_count:
-		spawn_stations()
-	for i in astroid_count:
-		spawn_astroids()	
-	for i in enemy_drone_count:
-		spawn_drones()
-
+#	Globals.current_scene = self
+#	for i in station_count:
+#		spawn_stations()
+#	for i in astroid_count:
+#		spawn_astroids()	
+#	for i in enemy_drone_count:
+#		spawn_drones()
+	pass
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -117,3 +119,8 @@ func spawn_stations():
 	station.translation = spawn_position
 	# Add station to scene
 	add_child(station)
+	
+	
+func spwan_player():
+	_player.instance()
+	add_child(_player)

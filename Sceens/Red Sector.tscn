@@ -1,11 +1,11 @@
 [gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Sceens/Base_sector.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Units/HiveStation.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Sceens/Asteroid.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Units/HiveSwarmShip.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Units/HiveMotherShip.tscn" type="PackedScene" id=6]
+[ext_resource path="res://UI/Portal.tscn" type="PackedScene" id=7]
 
 [sub_resource type="ProceduralSky" id=1]
 radiance_size = 4
@@ -40,5 +40,5 @@ astroids = ExtResource( 4 )
 [node name="WorldEnvironment" parent="." index="0"]
 environment = SubResource( 2 )
 
-[node name="Player" parent="." index="1" instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0403796, 0.054708, -0.0561156 )
+[node name="Portal" parent="." index="1" instance=ExtResource( 7 )]
+transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, -297.165 )

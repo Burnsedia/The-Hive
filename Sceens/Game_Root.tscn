@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Units/HiveMotherShip.tscn" type="PackedScene" id=2]
@@ -7,6 +7,9 @@
 [ext_resource path="res://Sceens/Asteroid.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Sceens/BlueNebla-RedStare.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Player/UI/PlayerUI.tscn" type="PackedScene" id=7]
+[ext_resource path="res://UI/Portal.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Sectors/WormHoles/Portal.gd" type="Script" id=9]
+[ext_resource path="res://Sceens/Red Sector.tscn" type="PackedScene" id=10]
 
 [node name="Game_Root" type="Node"]
 
@@ -23,12 +26,13 @@ random_rotation = true
 [node name="Player" parent="sectors/Blue-Nebla-RedStare" instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 0.999531, -0.0306083, 0, 0.0306083, 0.999531, 0, 0, 0 )
 
-[node name="enemy" parent="sectors/Blue-Nebla-RedStare" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 127.355 )
-
-[node name="enemy2" parent="sectors/Blue-Nebla-RedStare" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 70.9578, 0, 127.355 )
+[node name="Portal" parent="sectors/Blue-Nebla-RedStare" instance=ExtResource( 8 )]
+transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 10, 639.878, 0, 0 )
+script = ExtResource( 9 )
+ConnectedSector = ExtResource( 10 )
 
 [node name="UI" type="CanvasLayer" parent="."]
 
 [node name="TabContainer" parent="UI" instance=ExtResource( 7 )]
+[connection signal="area_entered" from="sectors/Blue-Nebla-RedStare/Portal" to="sectors/Blue-Nebla-RedStare/Player" method="_on_Portal_area_entered"]
+[connection signal="body_entered" from="sectors/Blue-Nebla-RedStare/Portal" to="sectors/Blue-Nebla-RedStare/Portal" method="_on_Portal_body_entered"]

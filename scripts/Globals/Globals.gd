@@ -23,13 +23,15 @@ func set_current_scene():
 	current_scene = root.get_child(root.get_child_count() - 1)
 
 func switch_sceen(sceen):
-	pass
+	get_tree().change_scene_to(sceen)
+	sceen.spwan_pdlayer()
+	current_scene = sceen
 
 func mission():
 	pass
 
 func spawn_wave():
-	var sector = get_tree().current_scene()
+	var sector = current_scene
 	sector.spawn_drones()
 	sector.spawn_Hives()
 

@@ -174,10 +174,20 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://Player/Player.gd"
 }, {
+"base": "Area",
+"class": "Portal",
+"language": "GDScript",
+"path": "res://Sectors/WormHoles/Portal.gd"
+}, {
 "base": "Spatial",
 "class": "Sector",
 "language": "GDScript",
 "path": "res://scripts/Sectors/BaseSector.gd"
+}, {
+"base": "Resource",
+"class": "SectorModel",
+"language": "GDScript",
+"path": "res://Sectors/SectorModel.gd"
 }, {
 "base": "RayCast",
 "class": "Sensor",
@@ -263,7 +273,9 @@ _global_script_class_icons={
 "HiveSwarmEnemy": "",
 "MissileLuncher": "",
 "Player": "",
+"Portal": "",
 "Sector": "",
+"SectorModel": "",
 "Sensor": "",
 "State": "",
 "StateMachine": "",
@@ -446,6 +458,12 @@ attack={
 [input_devices]
 
 pointing/emulate_mouse_from_touch=false
+
+[layer_names]
+
+3d_physics/layer_1="Player"
+3d_physics/layer_2="NPC"
+3d_physics/layer_3="Portals"
 
 [rendering]
 
