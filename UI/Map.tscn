@@ -1,0 +1,51 @@
+[gd_scene format=2]
+
+[node name="Map" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GraphEdit" type="GraphEdit" parent="."]
+margin_left = -9.0
+margin_top = 15.0
+margin_right = 1012.0
+margin_bottom = 613.0
+scroll_offset = Vector2( -40, -40 )
+use_snap = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GraphNode" type="GraphNode" parent="GraphEdit"]
+margin_left = 708.0
+margin_top = 34.0
+margin_right = 922.0
+margin_bottom = 134.0
+mouse_filter = 1
+custom_colors/close_color = Color( 0.0901961, 0.811765, 0.541176, 1 )
+
+[node name="GraphNode2" type="GraphNode" parent="GraphEdit"]
+margin_left = 130.0
+margin_top = 356.0
+margin_right = 344.0
+margin_bottom = 456.0
+mouse_filter = 1
+custom_colors/close_color = Color( 0.0901961, 0.811765, 0.541176, 1 )
+
+[node name="GraphNode3" type="GraphNode" parent="GraphEdit"]
+margin_left = 595.0
+margin_top = 229.0
+margin_right = 809.0
+margin_bottom = 329.0
+mouse_filter = 1
+custom_colors/close_color = Color( 0.0901961, 0.811765, 0.541176, 1 )
+
+[node name="GraphNode4" type="GraphNode" parent="GraphEdit"]
+margin_left = 81.0
+margin_top = 74.0
+margin_right = 295.0
+margin_bottom = 174.0
+mouse_filter = 1
+custom_colors/close_color = Color( 0.0901961, 0.811765, 0.541176, 1 )

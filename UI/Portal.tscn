@@ -1,0 +1,46 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://assets/textures/particle.png" type="Texture" id=1]
+
+[sub_resource type="SphereShape" id=1]
+
+[sub_resource type="SpatialMaterial" id=2]
+flags_transparent = true
+flags_unshaded = true
+albedo_color = Color( 0.101961, 0.811765, 0.745098, 1 )
+albedo_texture = ExtResource( 1 )
+
+[sub_resource type="Curve" id=3]
+_data = [ Vector2( 0, 0.973674 ), 0.0, 0.0, 0, 0, Vector2( 0.781818, 0.0191284 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=4]
+curve = SubResource( 3 )
+
+[sub_resource type="ParticlesMaterial" id=5]
+trail_size_modifier = SubResource( 4 )
+emission_shape = 1
+emission_sphere_radius = 8.0
+flag_align_y = true
+flag_rotate_y = true
+angle = 45.0
+angle_random = 1.0
+
+[sub_resource type="QuadMesh" id=6]
+
+[node name="Portal" type="Area"]
+transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0 )
+space_override = 1
+collision_layer = 7
+collision_mask = 0
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+shape = SubResource( 1 )
+
+[node name="Particles" type="Particles" parent="."]
+material_override = SubResource( 2 )
+cast_shadow = 0
+amount = 512
+randomness = 1.0
+fract_delta = false
+process_material = SubResource( 5 )
+draw_pass_1 = SubResource( 6 )
