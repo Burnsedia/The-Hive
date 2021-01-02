@@ -15,7 +15,7 @@ input_ray_pickable = false
 script = ExtResource( 1 )
 
 [node name="Graphic" parent="." index="1" instance=ExtResource( 4 )]
-transform = Transform( -1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, 0, 0, 0 )
+transform = Transform( -1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, 0.0342674, 0, 0.0180321 )
 
 [node name="Sensor" type="RayCast" parent="." index="2"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.722257, 0 )

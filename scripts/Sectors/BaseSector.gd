@@ -21,6 +21,7 @@ export(PackedScene) var MotherShip
 export(PackedScene) var Stations
 export(PackedScene) var astroids
 export(PackedScene) var artifacts
+export(PackedScene) var portals
 
 var _player = preload("res://Player/Player.tscn")
 
@@ -28,6 +29,7 @@ var _player = preload("res://Player/Player.tscn")
 export var enemy_mothership_count = 5
 export var enemy_drone_count = 50 
 export var station_count = 5
+export var portal_cout = 10
 
 # astoids
 export (bool) var random_rotation
@@ -37,21 +39,18 @@ export var astroid_count = 5000
 # number of artifacts if there are any
 var artifacts_count = rand_range(2.0, 16.0)
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-#	Globals.current_scene = self
-#	for i in station_count:
-#		spawn_stations()
-#	for i in astroid_count:
-#		spawn_astroids()	
-#	for i in enemy_drone_count:
-#		spawn_drones()
-	pass
+## Called when the node enters the scene tree for the first time.
+#func _ready():
+##	Globals.current_scene = self
+###	for i in station_count:
+###		spawn_stations()
+##	for i in astroid_count:
+##		spawn_astroids()	
+##	for i in enemy_drone_count:
+##		spawn_drones()
+##	for i in portal_cout:
+##		spawn_drones()
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
 
 # Spawn Astroids
 func spawn_astroids():
@@ -110,7 +109,7 @@ func spawn_drones():
 	
 func spawn_stations():
 	var spawn_position = Vector3()
-	var station = Stations.instance()
+	var station = Stations.ainstance()
 	# randomize position
 	spawn_position.x = rand_range(-radius, radius)
 	spawn_position.y = rand_range(-radius, radius)
@@ -120,6 +119,18 @@ func spawn_stations():
 	# Add station to scene
 	add_child(station)
 	
+func spawn_portals():
+	var spawn_position = Vector3()
+	var portal = portals.instance()
+	# randomize position
+	spawn_position.x = rand_range(-radius, radius)
+	spawn_position.y = rand_range(-radius, radius)
+	spawn_position.z = rand_range(-radius, radius)
+	# Set Station position 
+	portals.translation = spawn_position
+	# Add station to scene
+	add_child(portal)
+		
 	
 func spwan_player():
 	_player.instance()

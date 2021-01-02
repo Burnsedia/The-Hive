@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://Sceens/Base_sector.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Sectors/Base_sector.tscn" type="PackedScene" id=1]
 
 [sub_resource type="ProceduralSky" id=1]
 radiance_size = 4

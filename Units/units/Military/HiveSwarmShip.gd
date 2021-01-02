@@ -44,24 +44,24 @@ func kill() -> void:
  
 func set_player(p) -> void:
 	player = p
-#	print("player is set")
+	print("player is set")
 
 func set_player_vec() -> Vector3:
 	var player_vec = player.transform.origin - self.transform.origin
 	mov_vec =  player_vec
-	
 	return mov_vec
 
 #func aim():
 #	var disired_rotation = transform.looking_at(player.transform.origin, Vector3.UP)
 #	var a = Quat(transform.basis.get_rotation_quat().slerp(disired_rotation.get_rotation_quat())
-#	# need too finish this
-#	pass
+#	set_transform(Transform(a, transform.origin))
+
+
 
 # check if NPC needs to avoid closion
 #func avoid() -> Vector3:
 #	pass
-#
+
 func _on_ShootTimer_timeout() -> void:
 	can_shoot = true
 	attack()

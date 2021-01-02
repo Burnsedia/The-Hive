@@ -1,8 +1,9 @@
 [gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://scripts/systems/sensors/BaseSensor.gd" type="Script" id=1]
-[ext_resource path="res://Sceens/Weapon.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Sectors/Weapon.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Units/units/TerentBase.gd" type="Script" id=3]
+
 
 
 

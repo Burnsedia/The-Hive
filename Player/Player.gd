@@ -30,6 +30,7 @@ var hotkeys = {
 # Called when the node enters the scene tree for the first time.
 func _ready():	
 	get_tree().call_group("hive","set_player", self)
+	add_to_group("player")
 	
 	
 
@@ -46,12 +47,6 @@ func auto_target():
 
 func _process(_delta):
 	val = mov_vec
-	get_tree().call_group("hive","set_player", self)
-	if Input.is_action_just_pressed("exit"):
-		get_tree().quit()
-	if Input.is_action_just_pressed("restart"):
-		get_tree().reload_current_scene()
-	
 	if dead:
 		return
 	
@@ -80,21 +75,10 @@ func _process(_delta):
 	Movement.set_move_vec(move_vec)
 
 # Handle mouse and controler plus touch input
-##func _input(event):
-##	if event is InputEventMouseMotion or InputEventJoypadMotion:
-##		rotation_degrees.y -= mouse_sens * event.relative.x
-##		rotation_degrees.x += mouse_sens * event.relative.y
-#
-#
-#
-##	if event is InputEventKey and event.pressed:
-##		if event.scancode in hotkeys:
-##			Weapons.switch_to_weapon_slot(hotkeys[event.scancode])
-##	if event is InputEventMouseButton and event.pressed:
-##		if event.button_index == BUTTON_WHEEL_DOWN:
-##			Weapons.switch_to_next_weapon()
-##		if event.button_index == BUTTON_WHEEL_UP:
-##			Weapons.switch_to_last_weapon()
+#func _input(event):
+#	if event is InputEventMouseMotion or InputEventJoypadMotion:
+#		rotation_degrees.y -= mouse_sens * event.relative.x
+#		rotation_degrees.x += mouse_sens * event.relative.y
 
 func hurt(damage, dir):
 	Health.hurt(damage, dir)
@@ -109,8 +93,3 @@ func kill():
 func _I_am_the_player():
 	get_tree().call_group("hive","set_player", self)
 
-# Replace with function body.
-
-
-func _on_Portal_area_entered(area):
-	print("entered portal")

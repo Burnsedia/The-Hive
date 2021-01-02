@@ -13,3 +13,4 @@ signal HiveStationDistroyed()
 # Sector status changed
 signal SectorContested(ContestedSector, SectorOwner, Agressor)
 signal SectorConquored(ConqueredSector, NowOwner, LastOwner)
+signal JumpToSector(StartSector, TargetSector)

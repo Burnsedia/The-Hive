@@ -22,10 +22,10 @@ func set_current_scene():
 	var root = get_tree().get_root()
 	current_scene = root.get_child(root.get_child_count() - 1)
 
-func switch_sceen(sceen):
-	get_tree().change_scene_to(sceen)
-	sceen.spwan_pdlayer()
-	current_scene = sceen
+#func switch_sceen(sceen, traviler):
+#	get_tree().change_scene_to(sceen)
+#	sceen.add_child(traviler)
+#	current_scene = sceen
 
 func mission():
 	pass
