@@ -1,10 +1,12 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Units/HiveSwarmShip.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Sectors/Base_sector.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Units/HiveMotherShip.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Sectors/Asteroid.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Sectors/WormHoles/Portal.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Player/Player.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Sceens/BlueNebla-RedStare.tscn" type="PackedScene" id=7]
 
 [sub_resource type="ProceduralSky" id=1]
 radiance_size = 4
@@ -33,11 +35,15 @@ glow_bloom = 1.0
 [node name="RedNebla-BlueStar" instance=ExtResource( 2 )]
 drone = ExtResource( 1 )
 MotherShip = ExtResource( 3 )
-Stations = null
 astroids = ExtResource( 4 )
 
-[node name="WorldEnvironment" parent="." index="0"]
+[node name="Player" parent="." index="0" instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -17.0496 )
+collision_mask = 7
+
+[node name="WorldEnvironment" parent="." index="1"]
 environment = SubResource( 2 )
 
-[node name="Portal" parent="." index="1" instance=ExtResource( 5 )]
+[node name="Portal" parent="." index="2" instance=ExtResource( 5 )]
 transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, -297.165 )
+ConnectedSector = ExtResource( 7 )
