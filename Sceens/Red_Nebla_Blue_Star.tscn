@@ -47,3 +47,8 @@ environment = SubResource( 2 )
 [node name="Portal" parent="." index="2" instance=ExtResource( 5 )]
 transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, -297.165 )
 ConnectedSector = ExtResource( 7 )
+<<<<<<< HEAD
+=======
+
+[node name="Player" parent="." index="2" instance=ExtResource( 6 )]
+>>>>>>> GalaxyMapGern
