@@ -81,5 +81,5 @@ margin_right = 106.0
 margin_bottom = 116.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-text = "Graphics"
+text = "Main Menu"
 [connection signal="pressed" from="CenterContainer/VBoxContainer/Back to Main Menu" to="." method="_on_Back_to_Main_Menu_pressed"]
