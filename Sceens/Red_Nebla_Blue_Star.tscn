@@ -37,11 +37,18 @@ drone = ExtResource( 1 )
 MotherShip = ExtResource( 3 )
 astroids = ExtResource( 4 )
 
-[node name="WorldEnvironment" parent="." index="0"]
+[node name="Player" parent="." index="0" instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -17.0496 )
+collision_mask = 7
+
+[node name="WorldEnvironment" parent="." index="1"]
 environment = SubResource( 2 )
 
-[node name="Portal" parent="." index="1" instance=ExtResource( 5 )]
+[node name="Portal" parent="." index="2" instance=ExtResource( 5 )]
 transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, -297.165 )
 ConnectedSector = ExtResource( 7 )
+<<<<<<< HEAD
+=======
 
 [node name="Player" parent="." index="2" instance=ExtResource( 6 )]
+>>>>>>> GalaxyMapGern
