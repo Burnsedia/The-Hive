@@ -12,7 +12,7 @@ _global_script_classes=[ {
 "base": "StaticBody",
 "class": "Astroid",
 "language": "GDScript",
-"path": "res://scripts/Sectors/Asteroid.gd"
+"path": "res://Sectors/Asteroid.gd"
 }, {
 "base": "Reference",
 "class": "GSAIAgentLocation",
@@ -159,6 +159,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://lbry/godot-steering-ai-framework/GSAIUtils.gd"
 }, {
+"base": "Sector",
+"class": "HiveSector",
+"language": "GDScript",
+"path": "res://Sectors/HiveSector.gd"
+}, {
 "base": "ship",
 "class": "HiveSwarmEnemy",
 "language": "GDScript",
@@ -182,7 +187,7 @@ _global_script_classes=[ {
 "base": "Spatial",
 "class": "Sector",
 "language": "GDScript",
-"path": "res://scripts/Sectors/BaseSector.gd"
+"path": "res://Sectors/BaseSector.gd"
 }, {
 "base": "Resource",
 "class": "SectorModel",
@@ -270,6 +275,7 @@ _global_script_class_icons={
 "GSAISteeringBehavior": "",
 "GSAITargetAcceleration": "",
 "GSAIUtils": "",
+"HiveSector": "",
 "HiveSwarmEnemy": "",
 "MissileLuncher": "",
 "Player": "",
@@ -297,10 +303,10 @@ boot_splash/bg_color=Color( 0, 0, 0, 1 )
 
 [autoload]
 
-Events="*res://scripts/Globals/events.gd"
 UserData="*res://addons/github-integration/scripts/user_data.gd"
 IconLoaderGithub="*res://addons/github-integration/scripts/IconLoaderGithub.gd"
-Globals="*res://scripts/Globals/Globals.gd"
+Globals="*res://Globals/Globals.gd"
+Events="*res://Globals/events.gd"
 
 [display]
 
@@ -310,7 +316,7 @@ window/dpi/allow_hidpi=true
 
 [editor_plugins]
 
-enabled=PoolStringArray( "github-integration", "gut" )
+enabled=PoolStringArray( "Todo_Manager", "github-integration", "gut" )
 
 [input]
 
