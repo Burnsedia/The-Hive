@@ -313,6 +313,7 @@ UserData="*res://addons/github-integration/scripts/user_data.gd"
 IconLoaderGithub="*res://addons/github-integration/scripts/IconLoaderGithub.gd"
 Globals="*res://Globals/Globals.gd"
 Events="*res://Globals/events.gd"
+Todo="*res://addons/Todo_Manager/plugin.gd"
 
 [display]
 
