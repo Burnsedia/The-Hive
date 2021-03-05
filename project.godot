@@ -14,6 +14,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://Sectors/Asteroid.gd"
 }, {
+"base": "ship",
+"class": "Drone",
+"language": "GDScript",
+"path": "res://Units/units/Military/Drone/Drone.gd"
+}, {
 "base": "Reference",
 "class": "GSAIAgentLocation",
 "language": "GDScript",
@@ -251,6 +256,7 @@ _global_script_classes=[ {
 } ]
 _global_script_class_icons={
 "Astroid": "",
+"Drone": "",
 "GSAIAgentLocation": "",
 "GSAIArrive": "",
 "GSAIAvoidCollisions": "",
@@ -309,8 +315,6 @@ boot_splash/bg_color=Color( 0, 0, 0, 1 )
 
 [autoload]
 
-UserData="*res://addons/github-integration/scripts/user_data.gd"
-IconLoaderGithub="*res://addons/github-integration/scripts/IconLoaderGithub.gd"
 Globals="*res://Globals/Globals.gd"
 Events="*res://Globals/events.gd"
 Todo="*res://addons/Todo_Manager/plugin.gd"
@@ -320,10 +324,6 @@ Todo="*res://addons/Todo_Manager/plugin.gd"
 window/size/fullscreen=true
 window/size/always_on_top=true
 window/dpi/allow_hidpi=true
-
-[editor_plugins]
-
-enabled=PoolStringArray( "Todo_Manager", "github-integration", "gut" )
 
 [input]
 
