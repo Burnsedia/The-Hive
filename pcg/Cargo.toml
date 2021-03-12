@@ -1,0 +1,12 @@
+[package]
+name = "pcg"
+version = "0.1.0"
+authors = ["overlord"]
+edition = "2018"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+gdnative = "0.9.1"
+godot_rust_helper_ext = { git = "https://github.com/robertcorponoi/godot_rust_helper_ext" }

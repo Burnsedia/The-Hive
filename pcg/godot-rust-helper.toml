@@ -1,0 +1,11 @@
+[general]
+name = "pcg"
+targets = ["windows"]
+modules = ["Galaxy", "starsystem", "planet", "empire"]
+plugin = false
+
+[paths]
+lib = "/home/overlord/dev/The-Hive/pcg"
+godot = "/home/overlord/dev/The-Hive"
+output = "/home/overlord/dev/The-Hive"
+nativescript = "/home/overlord/dev/The-Hive"

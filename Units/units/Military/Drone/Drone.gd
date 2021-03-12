@@ -1,5 +1,5 @@
 extends ship
-
+class_name Drone
 
 var target = null
 
