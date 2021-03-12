@@ -1,0 +1,3 @@
+cargo:rerun-if-changed=docs/
+cargo:rerun-if-changed=api.json
+cargo:rerun-if-changed=build.rs
