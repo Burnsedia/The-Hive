@@ -1,3 +1,41 @@
-[gd_scene format=2]
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Sectors/UI/Sector2d.tscn" type="PackedScene" id=2]
 
 [node name="World2d" type="Node2D"]
+
+[node name="StarSystem" parent="." instance=ExtResource( 2 )]
+position = Vector2( 105.188, 119.467 )
+
+[node name="StarSystem2" parent="." instance=ExtResource( 2 )]
+position = Vector2( 789.668, 470.192 )
+
+[node name="StarSystem3" parent="." instance=ExtResource( 2 )]
+position = Vector2( 474.298, 263.716 )
+
+[node name="StarSystem4" parent="." instance=ExtResource( 2 )]
+position = Vector2( 98.1172, 419.28 )
+
+[node name="StarSystem5" parent="." instance=ExtResource( 2 )]
+position = Vector2( 405.002, 485.748 )
+
+[node name="StarSystem6" parent="." instance=ExtResource( 2 )]
+position = Vector2( 974.93, 502.719 )
+
+[node name="StarSystem7" parent="." instance=ExtResource( 2 )]
+position = Vector2( 298.936, 118.052 )
+
+[node name="StarSystem8" parent="." instance=ExtResource( 2 )]
+position = Vector2( 902.805, 316.042 )
+
+[node name="StarSystem9" parent="." instance=ExtResource( 2 )]
+position = Vector2( 540.766, 94.0107 )
+
+[node name="StarSystem10" parent="." instance=ExtResource( 2 )]
+position = Vector2( 291.865, 352.812 )
+
+[node name="StarSystem11" parent="." instance=ExtResource( 2 )]
+position = Vector2( 692.087, 354.226 )
+
+[node name="StarSystem12" parent="." instance=ExtResource( 2 )]
+position = Vector2( 782.597, 96.8392 )

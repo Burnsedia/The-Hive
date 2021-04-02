@@ -11,6 +11,6 @@ func _on_Portal_body_entered(body) -> void:
 	print(body.name + " entered bortal")
 	print(body.val)
 	get_tree().change_scene_to(ConnectedSector)
-	#body.queue_free()
+	#body.queue_free() 
 	emit_signal("JumpedToSector", _sector, ConnectedSector)
 	

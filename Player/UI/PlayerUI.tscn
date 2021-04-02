@@ -1,4 +1,7 @@
-[gd_scene format=2]
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Player/UI/PlayerUI.gd" type="Script" id=1]
+[ext_resource path="res://PopupMap.tscn" type="PackedScene" id=2]
 
 [node name="TabContainer" type="TabContainer"]
 anchor_right = 1.0
@@ -6,6 +9,7 @@ margin_left = 2.0
 margin_top = -1.0
 margin_right = 22.0
 margin_bottom = 55.0
+script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -79,3 +83,11 @@ margin_top = 32.0
 margin_right = -4.0
 margin_bottom = -4.0
 text = "Technology"
+
+[node name="Control" parent="." instance=ExtResource( 2 )]
+visible = false
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+[connection signal="pressed" from="Map" to="." method="_on_Map_pressed"]
