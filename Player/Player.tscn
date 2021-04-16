@@ -1,12 +1,15 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Player/Player.gd" type="Script" id=1]
-[ext_resource path="res://Units/units/ShipBase.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Units/ShipBase.tscn" type="PackedScene" id=2]
 [ext_resource path="res://SubSystems/MovementSytem.tscn" type="PackedScene" id=3]
 [ext_resource path="res://assets/Models/TEST2.glb" type="PackedScene" id=4]
 [ext_resource path="res://SubSystems/systems/weapons/WeaponManager.tscn" type="PackedScene" id=5]
 [ext_resource path="res://SubSystems/HealthManager.tscn" type="PackedScene" id=6]
 [ext_resource path="res://SubSystems/systems/sensors/BaseSensor.gd" type="Script" id=8]
+[ext_resource path="res://SubSystems/plasma_bullit.tscn" type="PackedScene" id=9]
+
+
 
 [node name="Player" groups=[
 "player",
@@ -33,3 +36,9 @@ ignore_rotation = true
 [node name="WeaponManager" parent="." index="5" instance=ExtResource( 5 )]
 
 [node name="HealthManager" parent="." index="6" instance=ExtResource( 6 )]
+
+[node name="Thurter" parent="." index="7" instance=ExtResource( 9 )]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 0.53248, 0, -7.32126 )
+
+[node name="Thurter2" parent="." index="8" instance=ExtResource( 9 )]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, -0.513345, 0, -7.33299 )

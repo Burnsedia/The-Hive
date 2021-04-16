@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://assets/textures/placeholder_dark_gray.png" type="Texture" id=1]
-[ext_resource path="res://scripts/Sectors/Asteroid.gd" type="Script" id=2]
+[ext_resource path="res://Sectors/Asteroid.gd" type="Script" id=2]
 
 [sub_resource type="CubeMesh" id=1]
 

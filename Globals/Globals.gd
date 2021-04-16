@@ -26,3 +26,6 @@ func _shoot(bullit, direction, position):
 	current_scene.add_child(b)
 	b.rotation = direction
 	b.transform.origin = position
+
+func JumpToSector(start, end):
+	pass

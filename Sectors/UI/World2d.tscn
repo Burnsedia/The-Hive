@@ -8,34 +8,190 @@
 position = Vector2( 105.188, 119.467 )
 
 [node name="StarSystem2" parent="." instance=ExtResource( 2 )]
-position = Vector2( 789.668, 470.192 )
+position = Vector2( 875.439, 855.68 )
 
 [node name="StarSystem3" parent="." instance=ExtResource( 2 )]
-position = Vector2( 474.298, 263.716 )
+position = Vector2( 766.6, 462.784 )
 
 [node name="StarSystem4" parent="." instance=ExtResource( 2 )]
-position = Vector2( 98.1172, 419.28 )
+position = Vector2( 59.4851, 440.459 )
 
 [node name="StarSystem5" parent="." instance=ExtResource( 2 )]
-position = Vector2( 405.002, 485.748 )
+position = Vector2( 403.911, 664.181 )
 
 [node name="StarSystem6" parent="." instance=ExtResource( 2 )]
-position = Vector2( 974.93, 502.719 )
+position = Vector2( 1249.82, 255.469 )
 
 [node name="StarSystem7" parent="." instance=ExtResource( 2 )]
-position = Vector2( 298.936, 118.052 )
+position = Vector2( 2511.36, 1131.03 )
 
 [node name="StarSystem8" parent="." instance=ExtResource( 2 )]
-position = Vector2( 902.805, 316.042 )
+position = Vector2( 1149.42, 725.222 )
 
 [node name="StarSystem9" parent="." instance=ExtResource( 2 )]
-position = Vector2( 540.766, 94.0107 )
+position = Vector2( 2082.91, 1386.69 )
 
 [node name="StarSystem10" parent="." instance=ExtResource( 2 )]
-position = Vector2( 291.865, 352.812 )
+position = Vector2( 2313.11, 351.052 )
 
 [node name="StarSystem11" parent="." instance=ExtResource( 2 )]
-position = Vector2( 692.087, 354.226 )
+position = Vector2( 918.62, 253.358 )
 
 [node name="StarSystem12" parent="." instance=ExtResource( 2 )]
-position = Vector2( 782.597, 96.8392 )
+position = Vector2( 1881.88, 866.323 )
+
+[node name="StarSystem13" parent="." instance=ExtResource( 2 )]
+position = Vector2( 79.7176, 733.025 )
+
+[node name="StarSystem14" parent="." instance=ExtResource( 2 )]
+position = Vector2( 1658.84, 1338.21 )
+
+[node name="StarSystem15" parent="." instance=ExtResource( 2 )]
+position = Vector2( 882.24, 1192.25 )
+
+[node name="StarSystem16" parent="." instance=ExtResource( 2 )]
+position = Vector2( 303.638, 1442.07 )
+
+[node name="StarSystem17" parent="." instance=ExtResource( 2 )]
+position = Vector2( 683.341, 1481.85 )
+
+[node name="StarSystem18" parent="." instance=ExtResource( 2 )]
+position = Vector2( 3080.64, 912.059 )
+
+[node name="StarSystem19" parent="." instance=ExtResource( 2 )]
+position = Vector2( 328.902, 897.919 )
+
+[node name="StarSystem20" parent="." instance=ExtResource( 2 )]
+position = Vector2( 1342.66, 872.998 )
+
+[node name="StarSystem21" parent="." instance=ExtResource( 2 )]
+position = Vector2( 192.756, 1723.06 )
+
+[node name="StarSystem22" parent="." instance=ExtResource( 2 )]
+position = Vector2( 1829.02, 180.939 )
+
+[node name="StarSystem23" parent="." instance=ExtResource( 2 )]
+position = Vector2( 1094.74, 1590.11 )
+
+[node name="StarSystem24" parent="." instance=ExtResource( 2 )]
+position = Vector2( 1422.37, 478.572 )
+
+[node name="StarSystem25" parent="." instance=ExtResource( 2 )]
+position = Vector2( 603.43, 2155.6 )
+
+[node name="StarSystem26" parent="." instance=ExtResource( 2 )]
+position = Vector2( 4463.39, 3156.85 )
+
+[node name="StarSystem27" parent="." instance=ExtResource( 2 )]
+position = Vector2( 1683.35, 2569.48 )
+
+[node name="StarSystem28" parent="." instance=ExtResource( 2 )]
+position = Vector2( 677.727, 2508.59 )
+
+[node name="StarSystem29" parent="." instance=ExtResource( 2 )]
+position = Vector2( 1395.98, 3092.08 )
+
+[node name="StarSystem30" parent="." instance=ExtResource( 2 )]
+position = Vector2( 2563.59, 2122 )
+
+[node name="StarSystem31" parent="." instance=ExtResource( 2 )]
+position = Vector2( 3521.6, 4055.16 )
+
+[node name="StarSystem32" parent="." instance=ExtResource( 2 )]
+position = Vector2( 5053.72, 3230.14 )
+
+[node name="StarSystem33" parent="." instance=ExtResource( 2 )]
+position = Vector2( 2677.15, 4166.83 )
+
+[node name="StarSystem34" parent="." instance=ExtResource( 2 )]
+position = Vector2( 3717.15, 2791.47 )
+
+[node name="StarSystem35" parent="." instance=ExtResource( 2 )]
+position = Vector2( 2370.33, 2079.48 )
+
+[node name="StarSystem36" parent="." instance=ExtResource( 2 )]
+position = Vector2( 3034.45, 2764.75 )
+
+[node name="StarSystem37" parent="." instance=ExtResource( 2 )]
+position = Vector2( 690.126, 2873.16 )
+
+[node name="StarSystem38" parent="." instance=ExtResource( 2 )]
+position = Vector2( 1651.54, 4010.13 )
+
+[node name="StarSystem39" parent="." instance=ExtResource( 2 )]
+position = Vector2( 5774.32, 3360.27 )
+
+[node name="StarSystem40" parent="." instance=ExtResource( 2 )]
+position = Vector2( 390.802, 3607.35 )
+
+[node name="StarSystem41" parent="." instance=ExtResource( 2 )]
+position = Vector2( 1040.73, 3744.16 )
+
+[node name="StarSystem42" parent="." instance=ExtResource( 2 )]
+position = Vector2( 2706.88, 3468.19 )
+
+[node name="StarSystem43" parent="." instance=ExtResource( 2 )]
+position = Vector2( 347.145, 3342.05 )
+
+[node name="StarSystem44" parent="." instance=ExtResource( 2 )]
+position = Vector2( 1992.9, 3405.13 )
+
+[node name="StarSystem45" parent="." instance=ExtResource( 2 )]
+position = Vector2( 482.998, 4191.2 )
+
+[node name="StarSystem46" parent="." instance=ExtResource( 2 )]
+position = Vector2( 3098.11, 2063.23 )
+
+[node name="StarSystem47" parent="." instance=ExtResource( 2 )]
+position = Vector2( 1448.98, 4594.25 )
+
+[node name="StarSystem48" parent="." instance=ExtResource( 2 )]
+position = Vector2( 4710.48, 2543.63 )
+
+[node name="StarSystem49" parent="." instance=ExtResource( 2 )]
+position = Vector2( 4443.43, 251.603 )
+
+[node name="StarSystem50" parent="." instance=ExtResource( 2 )]
+position = Vector2( 5213.68, 1139.82 )
+
+[node name="StarSystem51" parent="." instance=ExtResource( 2 )]
+position = Vector2( 5104.84, 746.919 )
+
+[node name="StarSystem52" parent="." instance=ExtResource( 2 )]
+position = Vector2( 3893.73, 500.594 )
+
+[node name="StarSystem53" parent="." instance=ExtResource( 2 )]
+position = Vector2( 4742.15, 948.316 )
+
+[node name="StarSystem54" parent="." instance=ExtResource( 2 )]
+position = Vector2( 5748.06, 355.604 )
+
+[node name="StarSystem55" parent="." instance=ExtResource( 2 )]
+position = Vector2( 7241.6, 1871.16 )
+
+[node name="StarSystem56" parent="." instance=ExtResource( 2 )]
+position = Vector2( 5487.66, 1009.36 )
+
+[node name="StarSystem57" parent="." instance=ExtResource( 2 )]
+position = Vector2( 7165.15, 3166.83 )
+
+[node name="StarSystem58" parent="." instance=ExtResource( 2 )]
+position = Vector2( 7187.35, 611.188 )
+
+[node name="StarSystem59" parent="." instance=ExtResource( 2 )]
+position = Vector2( 5280.86, 337.494 )
+
+[node name="StarSystem60" parent="." instance=ExtResource( 2 )]
+position = Vector2( 6548.13, 1190.46 )
+
+[node name="StarSystem61" parent="." instance=ExtResource( 2 )]
+position = Vector2( 4097.96, 1097.16 )
+
+[node name="StarSystem62" parent="." instance=ExtResource( 2 )]
+position = Vector2( 6309.08, 2358.34 )
+
+[node name="StarSystem63" parent="." instance=ExtResource( 2 )]
+position = Vector2( 4684.48, 1652.39 )
+
+[node name="StarSystem64" parent="." instance=ExtResource( 2 )]
+position = Vector2( 3777.88, 1558.21 )

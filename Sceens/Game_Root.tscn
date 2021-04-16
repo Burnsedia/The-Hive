@@ -1,60 +1,32 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=10 format=2]
 
-[ext_resource path="res://Sectors/WormHoles/Portal.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Sectors/Base_sector.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Sceens/BlueNebla-RedStare.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Sectors/Asteroid.tscn" type="PackedScene" id=3]
 [ext_resource path="res://UI/UI-Continer.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Units/Station.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Sectors/WormHoles/Portal.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Units/Station.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Units/HiveSwarmShip.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Units/HiveMotherShip.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Sceens/FactionStateMachine.tscn" type="PackedScene" id=9]
 
-[node name="Game_Root" type="Node"]
+[node name="Root" type="Node"]
 
 [node name="sectors" type="Node" parent="."]
 
-[node name="Blue-Nebla-RedStare" parent="sectors" instance=ExtResource( 3 )]
+[node name="Base_sector" parent="sectors" instance=ExtResource( 1 )]
+radius = 4096
+drone = ExtResource( 7 )
+MotherShip = ExtResource( 8 )
+Stations = ExtResource( 6 )
+astroids = ExtResource( 3 )
+portals = ExtResource( 5 )
 
-[node name="Player" parent="sectors/Blue-Nebla-RedStare" instance=ExtResource( 2 )]
-
-[node name="Portal" parent="sectors/Blue-Nebla-RedStare" instance=ExtResource( 1 )]
-transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 338.54 )
-ConnectedSector = ExtResource( 3 )
-
-[node name="Station" parent="sectors/Blue-Nebla-RedStare" instance=ExtResource( 8 )]
-transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 10, 272.198, -60.8475, 0 )
-
-[node name="Station2" parent="sectors/Blue-Nebla-RedStare" instance=ExtResource( 8 )]
-transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 10, 169.513, -60.8475, 240.945 )
-
-[node name="Station3" parent="sectors/Blue-Nebla-RedStare" instance=ExtResource( 8 )]
-transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 10, 38.1887, -223.857, 165.701 )
-
-[node name="Station4" parent="sectors/Blue-Nebla-RedStare" instance=ExtResource( 8 )]
-transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 10, 121.831, -168.777, 565.048 )
-
-[node name="Station5" parent="sectors/Blue-Nebla-RedStare" instance=ExtResource( 8 )]
-transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 10, 19.1457, -168.777, 805.993 )
-
-[node name="Station6" parent="sectors/Blue-Nebla-RedStare" instance=ExtResource( 8 )]
-transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 10, -112.178, -331.786, 730.749 )
-
-[node name="Station7" parent="sectors/Blue-Nebla-RedStare" instance=ExtResource( 8 )]
-transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 10, -175.087, -60.8475, 0 )
-
-[node name="Station8" parent="sectors/Blue-Nebla-RedStare" instance=ExtResource( 8 )]
-transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 10, -277.772, -60.8475, 240.945 )
-
-[node name="Station9" parent="sectors/Blue-Nebla-RedStare" instance=ExtResource( 8 )]
-transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 10, -409.096, -223.857, 165.701 )
-
-[node name="Station10" parent="sectors/Blue-Nebla-RedStare" instance=ExtResource( 8 )]
-transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 10, -325.454, -168.777, 565.048 )
-
-[node name="Station11" parent="sectors/Blue-Nebla-RedStare" instance=ExtResource( 8 )]
-transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 10, -428.139, -168.777, 805.993 )
-
-[node name="Station12" parent="sectors/Blue-Nebla-RedStare" instance=ExtResource( 8 )]
-transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 10, -559.463, -331.786, 730.749 )
+[node name="Player" parent="sectors/Base_sector" instance=ExtResource( 2 )]
 
 [node name="UI" type="CanvasLayer" parent="."]
 layer = 2
 
 [node name="UI-Continer" parent="UI" instance=ExtResource( 4 )]
+
+[node name="FactionStateMachine" parent="." instance=ExtResource( 9 )]

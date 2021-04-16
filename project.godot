@@ -17,7 +17,7 @@ _global_script_classes=[ {
 "base": "ship",
 "class": "Drone",
 "language": "GDScript",
-"path": "res://Units/units/Military/Drone/Drone.gd"
+"path": "res://Units/Human/Military/Drone/Drone.gd"
 }, {
 "base": "Reference",
 "class": "GSAIAgentLocation",
@@ -177,7 +177,7 @@ _global_script_classes=[ {
 "base": "ship",
 "class": "HiveSwarmEnemy",
 "language": "GDScript",
-"path": "res://Units/units/Military/HiveSwarmShip.gd"
+"path": "res://Units/HiveSwarmShip.gd"
 }, {
 "base": "Area",
 "class": "MissileLuncher",
@@ -219,15 +219,15 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://lbry/state/statematchine.gd"
 }, {
-"base": "StaticBody",
+"base": "Reference",
 "class": "Station",
 "language": "GDScript",
-"path": "res://Units/units/BaseStation.gd"
+"path": "res://Units/BaseStation.gd"
 }, {
 "base": "Spatial",
 "class": "TerentBase",
 "language": "GDScript",
-"path": "res://Units/units/TerentBase.gd"
+"path": "res://Units/TerentBase.gd"
 }, {
 "base": "Area",
 "class": "Weapon",
@@ -252,7 +252,7 @@ _global_script_classes=[ {
 "base": "KinematicBody",
 "class": "ship",
 "language": "GDScript",
-"path": "res://Units/units/ShipBase.gd"
+"path": "res://Units/ShipBase.gd"
 } ]
 _global_script_class_icons={
 "Astroid": "",
@@ -318,6 +318,7 @@ boot_splash/bg_color=Color( 0, 0, 0, 1 )
 Globals="*res://Globals/Globals.gd"
 Events="*res://Globals/events.gd"
 Todo="*res://addons/Todo_Manager/plugin.gd"
+Game="*res://Globals/Game.gd"
 
 [display]
 
