@@ -2,9 +2,9 @@
 extern crate gdnative;
 
 mod galaxy;
-mod ;
-mod ;
-mod ;
+mod starsystem;
+mod planet;
+mod empire;
 
 fn init(handle: gdnative::nativescript::InitHandle) {
 	handle.add_class::<galaxy::Galaxy>();
