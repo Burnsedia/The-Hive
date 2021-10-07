@@ -11,7 +11,7 @@ func _ready():
 	pass # Replace with function body.
 
 func _on_NewGame_pressed():
-	get_tree().change_scene("res://Sceens/Game_Root.tscn")
+	get_tree().change_scene("res://Sceens/StartSector.tscn")
 	print("Starting new game")
 
 func _on_Exit_pressed():

@@ -123,6 +123,7 @@ margin_right = 1075.0
 margin_bottom = 182.0
 size_flags_horizontal = 3
 text = "> Welcome back, My Lord"
+
 [connection signal="pressed" from="menu/Hb/cc/HBoxContainer/Butons/NewGame" to="." method="_on_NewGame_pressed"]
 [connection signal="pressed" from="menu/Hb/cc/HBoxContainer/Butons/Settings" to="." method="_on_Settings_pressed"]
 [connection signal="pressed" from="menu/Hb/cc/HBoxContainer/Butons/Exit" to="." method="_on_Exit_pressed"]
