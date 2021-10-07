@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Player/Player.gd" type="Script" id=1]
 [ext_resource path="res://Units/units/ShipBase.tscn" type="PackedScene" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://assets/Models/TEST2.glb" type="PackedScene" id=4]
 [ext_resource path="res://SubSystems/systems/weapons/WeaponManager.tscn" type="PackedScene" id=5]
 [ext_resource path="res://SubSystems/HealthManager.tscn" type="PackedScene" id=6]
+[ext_resource path="res://SubSystems/MissileLuncher.tscn" type="PackedScene" id=7]
 [ext_resource path="res://SubSystems/systems/sensors/BaseSensor.gd" type="Script" id=8]
 
 [node name="Player" groups=[
@@ -33,3 +34,9 @@ ignore_rotation = true
 [node name="WeaponManager" parent="." index="5" instance=ExtResource( 5 )]
 
 [node name="HealthManager" parent="." index="6" instance=ExtResource( 6 )]
+
+[node name="MissileLuncher" parent="." index="7" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 4.525 )
+
+[node name="MissileLuncher2" parent="." index="8" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 4.525 )
