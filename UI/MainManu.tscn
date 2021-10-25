@@ -1,11 +1,12 @@
 [gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://UI/MainManu.gd" type="Script" id=1]
-[ext_resource path="res://assets/textures/thumtag.png" type="Texture" id=2]
+[ext_resource path="res://assets/textures/back.png" type="Texture" id=2]
 
 [node name="Control" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+margin_right = 4.0
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -24,7 +25,7 @@ __meta__ = {
 }
 
 [node name="TextureRect" type="TextureRect" parent="menu"]
-margin_right = 1075.0
+margin_right = 1079.0
 margin_bottom = 181.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -34,15 +35,15 @@ stretch_mode = 1
 
 [node name="Hb" type="HBoxContainer" parent="menu"]
 margin_top = 185.0
-margin_right = 1075.0
+margin_right = 1079.0
 margin_bottom = 415.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 alignment = 1
 
 [node name="cc" type="CenterContainer" parent="menu/Hb"]
-margin_left = 495.0
-margin_right = 579.0
+margin_left = 497.0
+margin_right = 581.0
 margin_bottom = 230.0
 size_flags_vertical = 3
 
@@ -112,18 +113,23 @@ text = "Exit"
 
 [node name="Hb2" type="HBoxContainer" parent="menu"]
 margin_top = 419.0
-margin_right = 1075.0
+margin_right = 1079.0
 margin_bottom = 601.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 alignment = 1
 
 [node name="LineEdit" type="LineEdit" parent="menu/Hb2"]
-margin_right = 1075.0
+margin_right = 1079.0
 margin_bottom = 182.0
 size_flags_horizontal = 3
+size_flags_vertical = 3
 text = "> Welcome back, My Lord"
+<<<<<<< HEAD
 
+=======
+clear_button_enabled = true
+>>>>>>> master
 [connection signal="pressed" from="menu/Hb/cc/HBoxContainer/Butons/NewGame" to="." method="_on_NewGame_pressed"]
 [connection signal="pressed" from="menu/Hb/cc/HBoxContainer/Butons/Settings" to="." method="_on_Settings_pressed"]
 [connection signal="pressed" from="menu/Hb/cc/HBoxContainer/Butons/Exit" to="." method="_on_Exit_pressed"]

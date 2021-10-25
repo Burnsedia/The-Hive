@@ -4,6 +4,8 @@ class_name Player
 export var SensorRanger = 100.0
 export var mouse_sens = 0.5
 
+export var canHyperJump = true
+
 onready var camera = $Camera
 onready var sensors = $Sensor
 
@@ -79,6 +81,11 @@ func _process(_delta):
 #	if event is InputEventMouseMotion or InputEventJoypadMotion:
 #		rotation_degrees.y -= mouse_sens * event.relative.x
 #		rotation_degrees.x += mouse_sens * event.relative.y
+
+func jump(jumptarget):
+	Globals.current_scene.move_child(self)
+	Globals.current_scene = jumptarget
+	
 
 func hurt(damage, dir):
 	Health.hurt(damage, dir)
