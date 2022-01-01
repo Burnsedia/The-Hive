@@ -1,5 +1,5 @@
 extends Area
-class_name Portal
+class_name WormHole
 
 
 export(PackedScene) var ConnectedSector 
