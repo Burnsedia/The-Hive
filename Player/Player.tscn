@@ -9,9 +9,7 @@
 [ext_resource path="res://SubSystems/MissileLuncher.tscn" type="PackedScene" id=7]
 [ext_resource path="res://SubSystems/systems/sensors/BaseSensor.gd" type="Script" id=8]
 
-[node name="Player" groups=[
-"player",
-] instance=ExtResource( 2 )]
+[node name="Player" groups=["player"] instance=ExtResource( 2 )]
 input_ray_pickable = false
 script = ExtResource( 1 )
 

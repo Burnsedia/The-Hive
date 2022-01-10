@@ -13,4 +13,5 @@ func _on_Portal_body_entered(body) -> void:
 	get_tree().change_scene_to(ConnectedSector)
 	#body.queue_free()
 	emit_signal("JumpedToSector", _sector, ConnectedSector)
+	Globals.current_scene.add_child(body)
 	

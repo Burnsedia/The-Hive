@@ -40,16 +40,9 @@ export var astroid_count = 5000
 var artifacts_count = rand_range(2.0, 16.0)
 
 ## Called when the node enters the scene tree for the first time.
-#func _ready():
-##	Globals.current_scene = self
-###	for i in station_count:
-###		spawn_stations()
-##	for i in astroid_count:
-##		spawn_astroids()	
-##	for i in enemy_drone_count:
-##		spawn_drones()
-##	for i in portal_cout:
-##		spawn_drones()
+func _ready():
+	Globals.current_scene = self
+
 
 
 # Spawn Astroids
